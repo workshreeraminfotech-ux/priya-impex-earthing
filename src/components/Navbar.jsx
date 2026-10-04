@@ -392,7 +392,7 @@ export default function Navbar({ activePage, onNavigate, onOpenBrochure }) {
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <Mail size={16} style={{ color: 'var(--gold)' }} />
-                  <span>sales@priyaimpexs.com</span>
+                  <span>sales@priyaimpexindia.com</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <Phone size={16} style={{ color: 'var(--gold)' }} />

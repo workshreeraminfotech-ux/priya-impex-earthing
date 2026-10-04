@@ -15,9 +15,9 @@ const contactCards = [
   },
   {
     icon: Mail, label: 'Email Address',
-    value: 'sales@priyaimpexs.com',
+    value: 'sales@priyaimpexindia.com',
     sub: 'We reply within 24 hours',
-    href: 'mailto:sales@priyaimpexs.com',
+    href: 'mailto:sales@priyaimpexindia.com',
     color: '#D4AF37'
   },
   {

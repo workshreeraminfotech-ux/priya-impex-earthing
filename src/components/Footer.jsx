@@ -56,7 +56,7 @@ export default function Footer() {
               <strong>Phone / WhatsApp:</strong> +91 9328602931
             </div>
             <div className="footer-contact">
-              <strong>Email:</strong> sales@priyaimpexs.com
+              <strong>Email:</strong> sales@priyaimpexindia.com
             </div>
             <p style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.75)' }}>
               <strong>Location:</strong> Rajkot, Gujarat (India)

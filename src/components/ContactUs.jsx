@@ -72,7 +72,7 @@ export default function ContactUs() {
                 </div>
                 <div>
                   <strong style={{ display: 'block', fontSize: 14, color: '#fff' }}>Email Address:</strong>
-                  <a href="mailto:sales@priyaimpexs.com" style={{ fontSize: 15, color: 'rgba(255, 255, 255, 0.85)' }}>sales@priyaimpexs.com</a>
+                  <a href="mailto:sales@priyaimpexindia.com" style={{ fontSize: 15, color: 'rgba(255, 255, 255, 0.85)' }}>sales@priyaimpexindia.com</a>
                 </div>
               </div>
 

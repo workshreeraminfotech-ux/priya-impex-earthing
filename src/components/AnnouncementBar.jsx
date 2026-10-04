@@ -10,9 +10,9 @@ export default function AnnouncementBar() {
             <Phone size={14} color="var(--gold)" />
             <span>+91 9328602931</span>
           </a>
-          <a href="mailto:sales@priyaimpexs.com" className="announcement-item">
+          <a href="mailto:sales@priyaimpexindia.com" className="announcement-item">
             <Mail size={14} color="var(--gold)" />
-            <span>sales@priyaimpexs.com</span>
+            <span>sales@priyaimpexindia.com</span>
           </a>
         </div>
 

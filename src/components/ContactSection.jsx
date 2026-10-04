@@ -112,7 +112,7 @@ export default function ContactSection() {
               <div className="contact-info-item">
                 <div className="ci-icon"><Mail size={18} /></div>
                 <div className="ci-text">
-                  <strong>sales@priyaimpexs.com</strong>
+                  <strong>sales@priyaimpexindia.com</strong>
                   <span>We reply within 24 hours</span>
                 </div>
               </div>
