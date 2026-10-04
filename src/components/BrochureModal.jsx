@@ -8,7 +8,7 @@ export default function BrochureModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   const handleDirectDownload = () => {
-    // Direct PDF download without any form
+    // Direct PDF download
     const link = document.createElement('a');
     link.href = '/Priya%20Impex%20brochure.pdf';
     link.download = 'Priya_Impex_Brochure.pdf';
@@ -118,7 +118,7 @@ export default function BrochureModal({ isOpen, onClose }) {
               marginBottom: '10px', 
               lineHeight: 1.25 
             }}>
-              Download Priya Impex Brochure
+              Download Technical Brochure
             </h3>
 
             <p style={{ 
@@ -128,7 +128,7 @@ export default function BrochureModal({ isOpen, onClose }) {
               margin: '0 auto',
               maxWidth: '420px'
             }}>
-              Get our complete spice catalog with technical specifications, Sortex purity standards, container stuffing, and global export packaging details.
+              Get our complete earthing and brass parts catalogue with technical drawings, copper micron standards, and export packaging specifications.
             </p>
           </div>
 
@@ -172,15 +172,15 @@ export default function BrochureModal({ isOpen, onClose }) {
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <ShieldCheck size={16} style={{ color: '#C8940A', flexShrink: 0 }} />
-                    <span style={{ fontWeight: 600 }}>Spices Board, APEDA, FSSAI & ISO Certified Quality</span>
+                    <span style={{ fontWeight: 600 }}>IEC 62561, IEEE 80, BS 7430 & ISO 9001 Quality</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <Ship size={16} style={{ color: '#C8940A', flexShrink: 0 }} />
-                    <span style={{ fontWeight: 600 }}>20ft / 40ft FCL Stuffing & Mundra Port Shipping Info</span>
+                    <span style={{ fontWeight: 600 }}>Seaworthy Pallet Packaging & Mundra Port Dispatch</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <Sparkles size={16} style={{ color: '#C8940A', flexShrink: 0 }} />
-                    <span style={{ fontWeight: 600 }}>Cumin, Turmeric, Coriander, Fennel, Chilli & Powders</span>
+                    <span style={{ fontWeight: 600 }}>Copper Bonded Rods, Chemical Electrodes & Brass Parts</span>
                   </div>
                 </div>
 

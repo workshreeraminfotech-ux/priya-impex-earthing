@@ -11,7 +11,7 @@ export default function HeroBannerSlider({ onOpenQuote, onNavigate }) {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    // Mobile screens (< 768px) and Data Saver users stay on the lightweight 31KB poster for instant load
+    // Mobile screens (< 768px) and Data Saver users stay on the lightweight poster for instant load
     const isMobile = window.innerWidth < 768;
     const isDataSaver = navigator.connection?.saveData === true || navigator.connection?.effectiveType === '2g' || navigator.connection?.effectiveType === '3g';
 
@@ -37,10 +37,10 @@ export default function HeroBannerSlider({ onOpenQuote, onNavigate }) {
         padding: '78px 0 82px'
       }}
     >
-      {/* Instant Eager-Loaded Lightweight Poster Image (Renders in ~30ms on 2G/3G) */}
+      {/* Instant Eager-Loaded Lightweight Poster Image */}
       <img
         src={heroPosterImg}
-        alt="Priya Impex Global Spices"
+        alt="Priya Impex Earthing & Brass Parts Manufacturer"
         fetchPriority="high"
         loading="eager"
         decoding="async"
@@ -84,105 +84,101 @@ export default function HeroBannerSlider({ onOpenQuote, onNavigate }) {
         </video>
       )}
 
-      {/* Clean Subtle Dark Gradient Overlay */}
+      {/* Clean Subtle Transparent Gradient Overlay */}
       <div 
         className="hero-video-overlay" 
         style={{ 
           position: 'absolute', 
           inset: 0, 
-          background: 'linear-gradient(180deg, rgba(7, 11, 20, 0.42) 0%, rgba(7, 11, 20, 0.58) 55%, rgba(5, 8, 16, 0.82) 100%)', 
+          background: 'linear-gradient(180deg, rgba(7, 11, 20, 0.25) 0%, rgba(7, 11, 20, 0.38) 55%, rgba(5, 8, 16, 0.58) 100%)', 
           zIndex: 3 
         }}
       ></div>
 
-      <div className="container" style={{ position: 'relative', zIndex: 4 }}>
-        <div style={{ maxWidth: '820px' }}>
+      <div className="container" style={{ position: 'relative', zIndex: 4, width: '100%' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           
-          {/* Top Tagline Badge */}
+          {/* Main Framed Heading Box (Transparent Background) */}
           <motion.div 
-            initial={{ opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            style={{ marginBottom: '20px' }}
-          >
-            <span 
-              style={{ 
-                display: 'inline-flex', 
-                alignItems: 'center', 
-                gap: '8px', 
-                background: 'rgba(7, 16, 32, 0.82)', 
-                border: '1px solid rgba(200, 148, 10, 0.65)', 
-                backdropFilter: 'blur(10px)', 
-                padding: '6px 16px', 
-                borderRadius: '100px', 
-                fontSize: '13px', 
-                fontWeight: 700, 
-                color: '#F5C542',
-                boxShadow: '0 4px 15px rgba(0,0,0,0.25)'
-              }}
-            >
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#22c55e', display: 'inline-block', boxShadow: '0 0 8px #22c55e' }}></span>
-              <span>Delivering Trust, Exporting Excellence</span>
-            </span>
-          </motion.div>
-
-          {/* Main Hero Heading */}
-          <motion.h1 
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            style={{ 
-              fontFamily: 'var(--font-h)', 
-              fontSize: 'clamp(34px, 5.2vw, 50px)', 
-              fontWeight: 900, 
-              color: '#ffffff', 
-              lineHeight: 1.16, 
-              marginBottom: '18px', 
-              letterSpacing: '-0.5px',
-              textShadow: '0 4px 24px rgba(0,0,0,0.6)' 
+            initial={{ opacity: 0, scale: 0.95, y: 15 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            style={{
+              border: '2px solid rgba(255, 255, 255, 0.95)',
+              padding: 'clamp(20px, 3.5vw, 36px) clamp(30px, 6vw, 70px)',
+              display: 'inline-block',
+              textAlign: 'center',
+              margin: '0 auto 24px auto',
+              background: 'transparent',
+              boxShadow: 'none'
             }}
           >
-            Premium Indian Spices & <br />
-            <span style={{ background: 'linear-gradient(135deg, #FFFFFF 0%, #F5C542 50%, #D4AF37 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Seed Spices Exporter
-            </span>
-          </motion.h1>
+            <div 
+              style={{ 
+                fontFamily: 'var(--font-h)', 
+                fontSize: 'clamp(32px, 4.8vw, 54px)', 
+                fontWeight: 600, 
+                color: '#ffffff', 
+                lineHeight: 1.18, 
+                letterSpacing: '-0.3px',
+                textShadow: '0 3px 18px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.9)'
+              }}
+            >
+              Welcome to
+            </div>
+            <div 
+              style={{ 
+                fontFamily: 'var(--font-h)', 
+                fontSize: 'clamp(42px, 6.8vw, 78px)', 
+                fontWeight: 800, 
+                color: '#ffffff', 
+                lineHeight: 1.1, 
+                letterSpacing: '-0.5px',
+                marginTop: '4px',
+                textShadow: '0 4px 24px rgba(0,0,0,0.9), 0 2px 6px rgba(0,0,0,0.95)'
+              }}
+            >
+              Priya Impex
+            </div>
+          </motion.div>
 
-          {/* Subtitle / Paragraph */}
+          {/* Subtitle Line Below Frame (Matching Screenshot Style + Detailed) */}
           <motion.p 
-            initial={{ opacity: 0, y: 18 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             style={{ 
-              fontSize: 'clamp(15px, 1.8vw, 17.5px)', 
-              color: 'rgba(255,255,255,0.92)', 
-              lineHeight: 1.62, 
+              fontSize: 'clamp(16px, 2.1vw, 20px)', 
+              color: 'rgba(255, 255, 255, 0.96)', 
+              fontWeight: 500,
+              lineHeight: 1.6, 
               marginBottom: '32px', 
-              maxWidth: '680px', 
-              textShadow: '0 2px 10px rgba(0,0,0,0.45)' 
+              maxWidth: '920px', 
+              letterSpacing: '0.2px',
+              textShadow: '0 2px 14px rgba(0,0,0,0.75)' 
             }}
           >
-            Direct sourcing from Gujarat & India's top spice growing hubs. Supplying export-grade seed spices, whole spices, and fine ground powders with 100% purity and fast worldwide port dispatch.
+            Your Trusted Partner for Earthing Solutions and Precision Brass Components with 25+ Years Manufacturing Heritage across 2 Gujarat Units (Rajkot & Jamnagar). Direct Global Export of Certified Electrical Protection & Precision Machined Parts.
           </motion.p>
 
           {/* CTA Action Buttons */}
           <motion.div 
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}
+            transition={{ duration: 0.5, delay: 0.35 }}
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}
           >
             <button 
               className="btn btn-primary" 
               onClick={() => onNavigate ? onNavigate('contact') : null}
               style={{ 
-                padding: '14px 28px', 
-                fontSize: '15px', 
+                padding: '14px 30px', 
+                fontSize: '15.5px', 
                 fontWeight: 700,
                 display: 'inline-flex', 
                 alignItems: 'center', 
                 gap: '8px', 
-                boxShadow: '0 8px 24px rgba(200, 148, 10, 0.35)',
+                boxShadow: '0 8px 24px rgba(200, 148, 10, 0.4)',
                 borderRadius: '8px'
               }}
             >
@@ -195,11 +191,11 @@ export default function HeroBannerSlider({ onOpenQuote, onNavigate }) {
               onClick={() => onNavigate ? onNavigate('products') : null}
               style={{ 
                 color: '#ffffff', 
-                borderColor: 'rgba(255,255,255,0.35)', 
-                background: 'rgba(255,255,255,0.1)', 
+                borderColor: 'rgba(255,255,255,0.45)', 
+                background: 'rgba(255,255,255,0.12)', 
                 backdropFilter: 'blur(8px)',
-                padding: '13px 24px', 
-                fontSize: '15px', 
+                padding: '13px 26px', 
+                fontSize: '15.5px', 
                 fontWeight: 600,
                 borderRadius: '8px',
                 display: 'inline-flex',

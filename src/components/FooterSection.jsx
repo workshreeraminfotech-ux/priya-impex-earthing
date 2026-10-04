@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Linkedin, MessageCircle, ChevronRight, Mail, MapPin, Phone, ArrowUpRight } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, ChevronRight, Mail, MapPin, Phone } from 'lucide-react';
 import logoImg from '../assets/logo.png';
 
 export default function FooterSection({ onNavigate }) {
@@ -16,7 +16,7 @@ export default function FooterSection({ onNavigate }) {
               <img src={logoImg} alt="Priya Impex" style={{ height: '52px', width: 'auto', objectFit: 'contain', filter: 'brightness(1.05)' }} />
             </div>
             <p className="footer-bio-text">
-              Priya Impex is a premier Indian exporter of pure Whole Spices, Seed Spices, and Ground Spices. Delivering trust, exporting excellence directly to global markets.
+              Priya Impex is an established manufacturer & direct exporter with 25+ years of excellence in Precision Earthing Parts, Copper Bonded Rods, and CNC Machined Brass Components.
             </p>
             <div className="footer-social-row">
               <a href="https://www.facebook.com/people/Priya-impex/61586308456903/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
@@ -65,21 +65,21 @@ export default function FooterSection({ onNavigate }) {
 
           {/* Col 3: Product Categories */}
           <div className="footer-col">
-            <h3>Spice Categories</h3>
+            <h3>Product Categories</h3>
             <ul className="footer-links-list">
               <li>
-                <a href="#" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('products'); }}>
-                  <ChevronRight size={14} className="link-arrow" /> Seed Spices
+                <a href="#" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('products', 'Earthing Solutions'); }}>
+                  <ChevronRight size={14} className="link-arrow" /> Earthing Solutions
                 </a>
               </li>
               <li>
-                <a href="#" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('products'); }}>
-                  <ChevronRight size={14} className="link-arrow" /> Whole Spices
+                <a href="#" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('products', 'Brass Components'); }}>
+                  <ChevronRight size={14} className="link-arrow" /> Brass Components
                 </a>
               </li>
               <li>
-                <a href="#" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('products'); }}>
-                  <ChevronRight size={14} className="link-arrow" /> Ground Spices
+                <a href="#" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('products', 'Earthing Accessories'); }}>
+                  <ChevronRight size={14} className="link-arrow" /> Earthing Accessories
                 </a>
               </li>
             </ul>
@@ -128,5 +128,3 @@ export default function FooterSection({ onNavigate }) {
     </footer>
   );
 }
-
-

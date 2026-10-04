@@ -4,24 +4,24 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const faqs = [
   {
-    q: "Are your spice export products certified and quality tested?",
-    a: "Yes, all our products undergo multi-stage laboratory testing and come with necessary export certifications (FSSAI, Spices Board / APEDA, ISO, Phytosanitary) to guarantee compliance with international food safety standards."
+    q: "Are your earthing rods and brass components certified to international standards?",
+    a: "Yes, all our copper bonded rods, chemical electrodes, and precision brass parts are manufactured to comply with IEC 62561-2, UL 467, IEEE 80, BS 7430, ISO 9001:2015, and RoHS directives, complete with Material Test Certificates (MTC) and lab test reports."
   },
   {
-    q: "What is the typical delivery timeframe for international shipments?",
-    a: "Delivery timelines depend on the destination port and shipment size. Standard containerized ocean shipments are typically dispatched within 7–12 business days after order confirmation and customs clearance."
+    q: "Can you manufacture custom brass parts and clamps as per client engineering drawings?",
+    a: "Absolutely! Backed by 25+ years of manufacturing experience, in-house foundry casting, extrusion lines, and advanced CNC/VMC machining centers, we produce custom OEM brass parts, grounding clamps, and neutral bars strictly to your tolerances."
   },
   {
-    q: "Can I request product samples before placing a bulk order?",
-    a: "Absolutely! We provide product samples for bulk commercial buyers upon request so you can verify our quality, color, aroma, and grading firsthand."
+    q: "What is the copper coating thickness on your copper bonded earthing rods?",
+    a: "We provide electrolytic molecular copper bonding thicknesses ranging from 100 microns up to 254 microns (UL 467 / IEC 62561 standard) with irreversible molecular bonding that prevents peeling or cracking during deep soil driving."
   },
   {
-    q: "How do you ensure product freshness and aroma during long transit?",
-    a: "We utilize multi-layer food-grade eco packaging, vacuum sealing, and humidity-controlled storage to protect whole spices, seed spices, and ground spices against moisture, pests, and ambient degradation during sea voyages."
+    q: "What is the typical production and export dispatch timeframe?",
+    a: "Standard export container consignments (FCL/LCL) are packed in heavy-duty seaworthy wooden pallets/crates and dispatched from Mundra or Pipavav ports within 10–18 business days from order confirmation."
   },
   {
-    q: "Do you offer private labeling and custom packaging sizes?",
-    a: "Yes, we provide customized bulk packaging (10kg, 25kg, 50kg PP/Jute bags) as well as retail-ready private label packaging per buyer specifications."
+    q: "Do you supply product samples for technical and dimensional approval?",
+    a: "Yes, we provide sample pieces of our earthing rods, brass cable glands, neutral links, and grounding clamps to qualified commercial buyers, EPC contractors, and distributors for dimensional and material validation."
   }
 ];
 
@@ -45,7 +45,7 @@ export default function FAQ({ onNavigate }) {
                 Got Questions? <span>We Have Answers</span>
               </h2>
               <p>
-                Find answers to common questions about our spice export certifications, bulk export shipping, packaging, and quality guarantees.
+                Find answers to common questions about our earthing parts certifications, custom CNC brass manufacturing, container shipping, and quality testing.
               </p>
             </div>
 
@@ -55,14 +55,14 @@ export default function FAQ({ onNavigate }) {
                 <HelpCircle size={26} />
               </div>
               <div className="faq-support-content">
-                <h4>Have more specific questions?</h4>
-                <p>Our export specialists are available to assist with quotes and custom specifications.</p>
+                <h4>Have technical drawings or custom requirements?</h4>
+                <p>Our engineering export desk is available to assist with technical quotes and custom specifications.</p>
                 <button
                   onClick={() => onNavigate && onNavigate('contact')}
                   className="btn btn-primary"
                   style={{ padding: '10px 20px', fontSize: '13.5px', marginTop: '12px' }}
                 >
-                  <span>Contact Us</span>
+                  <span>Contact Technical Desk</span>
                   <ArrowRight size={14} />
                 </button>
               </div>
@@ -116,5 +116,3 @@ export default function FAQ({ onNavigate }) {
     </section>
   );
 }
-
-

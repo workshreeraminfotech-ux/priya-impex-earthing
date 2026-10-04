@@ -12,7 +12,7 @@ export default function Footer() {
               <img src={logoImg} alt="Priya Impex Logo" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
             </div>
             <p style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.75)', margin: '16px 0 20px', lineHeight: 1.6 }}>
-              Priya Impex is a premier Indian exporter of high-grade Seed Spices, Whole Spices, and Ground Spices. Delivering trust, exporting excellence globally.
+              Priya Impex is an established manufacturer & direct exporter with 25+ years of excellence in Precision Earthing Parts, Copper Bonded Rods, and CNC Machined Brass Components.
             </p>
             <div className="social-links">
               <a href="https://www.facebook.com/people/Priya-impex/61586308456903/" target="_blank" rel="noopener noreferrer" className="social-icon" title="Facebook">
@@ -24,7 +24,7 @@ export default function Footer() {
               <a href="https://in.linkedin.com/company/priyaimpex-india" target="_blank" rel="noopener noreferrer" className="social-icon" title="LinkedIn">
                 <Linkedin size={15} />
               </a>
-              <a href="https://api.whatsapp.com/send?phone=919328602931&text=Hi%20Priya%20Impex!" target="_blank" rel="noopener noreferrer" className="social-icon" title="Business WhatsApp">
+              <a href="https://api.whatsapp.com/send?phone=919328602931&text=Hi%20Priya%20Impex!%20I%20would%20like%20to%20enquire%20about%20your%20Earthing%20Parts%20and%20Brass%20Components." target="_blank" rel="noopener noreferrer" className="social-icon" title="Business WhatsApp">
                 <MessageCircle size={14} />
               </a>
             </div>
@@ -42,11 +42,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '16px', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>Spice Categories</h4>
+            <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '16px', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>Product Categories</h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '14px' }}>
-              <li><a href="#products" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Seed Spices</a></li>
-              <li><a href="#products" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Whole Spices</a></li>
-              <li><a href="#products" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Ground Spices</a></li>
+              <li><a href="#products" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Earthing Solutions</a></li>
+              <li><a href="#products" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Brass Components</a></li>
+              <li><a href="#products" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Earthing Accessories</a></li>
             </ul>
           </div>
 

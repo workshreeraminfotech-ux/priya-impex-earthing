@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Clock, ArrowRight, X, Sparkles } from 'lucide-react';
+import { Search, Clock, ArrowRight, X } from 'lucide-react';
 import { useStoreBlogs } from '../utils/useStore';
 
 export default function BlogPage() {
@@ -30,8 +30,8 @@ export default function BlogPage() {
       }}>
         {/* Background Image */}
         <img 
-          src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1920&q=80" 
-          alt="Priya Impex Spice Blog Background" 
+          src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=80" 
+          alt="Priya Impex Earthing & Brass Engineering Insights" 
           style={{
             position: 'absolute',
             inset: 0,
@@ -52,41 +52,16 @@ export default function BlogPage() {
 
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <motion.div initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ maxWidth: '820px', margin: '0 auto', textAlign: 'center' }}>
-            <span style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              backgroundColor: 'rgba(255, 255, 255, 0.12)',
-              border: '1px solid rgba(255, 255, 255, 0.25)',
-              color: '#FFFFFF',
-              fontSize: '12px',
-              fontWeight: 800,
-              textTransform: 'uppercase',
-              letterSpacing: '2px',
-              padding: '6px 20px',
-              borderRadius: '100px',
-              marginBottom: '20px',
-              backdropFilter: 'blur(6px)'
-            }}>
-              <Sparkles size={14} style={{ color: '#F5C542' }} />
-              Knowledge Hub & Export Insights
-            </span>
-
             <h1 style={{
               fontFamily: 'var(--font-h, Outfit, sans-serif)',
-              fontSize: 'clamp(32px, 5vw, 54px)',
+              fontSize: 'clamp(34px, 5vw, 54px)',
               fontWeight: 900,
-              marginBottom: '20px',
+              margin: 0,
               lineHeight: 1.15,
               color: '#FFFFFF'
             }}>
-              Spice Product Guides & <br />
-              <span style={{ color: '#F5C542' }}>Market Insights</span>
+              Latest <span style={{ color: '#F5C542' }}>Blogs</span>
             </h1>
-
-            <p style={{ fontSize: '17px', color: 'rgba(255, 255, 255, 0.9)', lineHeight: 1.6, maxWidth: '680px', margin: '0 auto', fontWeight: 500 }}>
-              Expert articles on Indian spice quality parameters, curcumin testing, ASTA color ratings, purity standards, and global spice trade & exports.
-            </p>
           </motion.div>
         </div>
       </section>
@@ -97,7 +72,7 @@ export default function BlogPage() {
           {/* Header Controls */}
           <div style={{ marginBottom: 40, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
             <h2 style={{ fontFamily: 'var(--font-h, Outfit, sans-serif)', fontSize: 24, fontWeight: 800, color: 'var(--navy)' }}>
-              All Articles <span style={{ color: 'var(--gray)', fontWeight: 500, fontSize: 16 }}>({filtered.length})</span>
+              All Technical Articles <span style={{ color: 'var(--gray)', fontWeight: 500, fontSize: 16 }}>({filtered.length})</span>
             </h2>
             
             <div style={{
@@ -290,8 +265,8 @@ export default function BlogPage() {
                       <Clock size={13} /> {b.date}
                     </span>
 
-                    <span style={{ fontSize: '13px', fontWeight: 700, color: '#002147', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                      Read <ArrowRight size={13} />
+                    <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--gold-deep)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                      Read Article <ArrowRight size={13} />
                     </span>
                   </div>
                 </div>
@@ -353,7 +328,7 @@ export default function BlogPage() {
               <X size={18} />
             </button>
 
-            {/* Header Image — Uncropped contain */}
+            {/* Header Image */}
             <div style={{
               height: 230,
               backgroundColor: '#FFFFFF',

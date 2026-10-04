@@ -19,13 +19,13 @@ export default function RecentBlogs({ onNavigate }) {
           transition={{ duration: 0.6 }}
         >
           <span className="eyebrow">
-            EXPORT KNOWLEDGE & PRODUCT GUIDES
+            TECHNICAL KNOWLEDGE & ENGINEERING GUIDES
           </span>
           <h2 style={{ color: 'var(--navy)', marginTop: '10px' }}>
-            Latest <span style={{ color: 'var(--gold)' }}>Spice Blog Posts</span>
+            Latest <span style={{ color: 'var(--gold)' }}>Engineering Blog Posts</span>
           </h2>
           <p style={{ color: 'var(--gray)', marginTop: '8px' }}>
-            Product quality guides, curcumin testing, ASTA color ratings, and market insights for international buyers.
+            Product quality guides, IEC 62561 standards, copper bonding thickness, and grounding insights for global EPC buyers.
           </p>
         </motion.div>
 

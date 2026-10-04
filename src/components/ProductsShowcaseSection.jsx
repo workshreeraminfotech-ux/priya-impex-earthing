@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useStoreProducts } from '../utils/useStore';
 
-// Top 6 most exported spices from India (Seed Spices & Whole Spices First)
+// Top 6 flagship export products (Earthing Solutions & Brass Parts)
 const TOP_6_EXPORT_IDS = [
-  'cumin-seeds',
-  'coriander-seeds',
-  'fennel-seeds',
-  'black-pepper',
-  'dry-red-chilli',
-  'turmeric-fingers'
+  'copper-bonded-earthing-rods',
+  'chemical-earthing-electrodes',
+  'brass-cable-glands',
+  'brass-neutral-links',
+  'rod-to-tape-clamps',
+  'earth-pit-covers'
 ];
 
 export default function ProductsShowcaseSection({ onSelectProduct, onOpenQuote, onNavigate }) {
@@ -30,13 +30,13 @@ export default function ProductsShowcaseSection({ onSelectProduct, onOpenQuote, 
         <div style={{ textAlign: 'center', marginBottom: '48px' }}>
           <div className="section-title">
             <span className="eyebrow">
-              TOP EXPORT SPICES FROM INDIA
+              PRECISION MANUFACTURING EXCELLENCE
             </span>
             <h2 style={{ color: 'var(--navy)', marginTop: '12px' }}>
-              Our Featured <span style={{ color: 'var(--gold)' }}>Indian Spices</span>
+              Our Featured <span style={{ color: 'var(--gold)' }}>Earthing & Brass Solutions</span>
             </h2>
             <p style={{ marginTop: '10px', color: 'var(--gray)', maxWidth: '600px', margin: '10px auto 0' }}>
-              India's most demanded premium export spices — machine cleaned, Sortex sorted, and packed for international trade.
+              India's premier high-conductivity Copper Bonded Rods, Chemical Electrodes, and Precision CNC Brass Components.
             </p>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function ProductsShowcaseSection({ onSelectProduct, onOpenQuote, 
               }}
               whileHover={{ y: -6, boxShadow: '0 20px 40px rgba(200, 148, 10, 0.2)', borderColor: 'var(--gold)' }}
             >
-              {/* Product Image — Object-Fit Contain (Uncropped) */}
+              {/* Product Image */}
               <div 
                 style={{ 
                   height: '240px', 
@@ -70,7 +70,7 @@ export default function ProductsShowcaseSection({ onSelectProduct, onOpenQuote, 
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center', 
-                  padding: '20px',
+                  padding: '20px', 
                   borderBottom: '1px solid var(--border)',
                   position: 'relative',
                   cursor: 'pointer'
@@ -92,7 +92,7 @@ export default function ProductsShowcaseSection({ onSelectProduct, onOpenQuote, 
                 />
               </div>
 
-              {/* Product Body — Simplified (Title & Brief Description Only) */}
+              {/* Product Body */}
               <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <h3 
                   style={{ fontSize: '20px', fontWeight: 800, color: 'var(--navy)', marginBottom: '10px', lineHeight: 1.3, cursor: 'pointer' }}
@@ -128,7 +128,7 @@ export default function ProductsShowcaseSection({ onSelectProduct, onOpenQuote, 
             className="btn btn-primary"
             style={{ padding: '14px 32px', fontSize: '15px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
           >
-            <span>Explore All {allProducts.length} Spices Products</span>
+            <span>Explore All {allProducts.length} Products</span>
             <ArrowRight size={18} />
           </button>
         </div>

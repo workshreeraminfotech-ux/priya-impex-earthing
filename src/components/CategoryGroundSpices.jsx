@@ -3,10 +3,9 @@ import { ArrowRight } from 'lucide-react';
 import { useStoreProducts } from '../utils/useStore';
 
 export default function CategoryGroundSpices({ onSelectProduct }) {
-  // Find featured ground spices from central database safely
   const prods = useStoreProducts();
-  const groundSpices = (Array.isArray(prods) ? prods : [])
-    .filter(p => p && (p.category === 'Ground Spices' || p.cat === 'Ground Spices'))
+  const earthingProducts = (Array.isArray(prods) ? prods : [])
+    .filter(p => p && (p.category === 'Earthing Solutions' || p.cat === 'Earthing Solutions'))
     .slice(0, 4);
 
   return (
@@ -16,10 +15,10 @@ export default function CategoryGroundSpices({ onSelectProduct }) {
           <div className="products-left">
             <div className="section-title left-align">
               <span className="ph-eyebrow">Our Products</span>
-              <h2>Ground <span>Spices</span></h2>
+              <h2>Earthing <span>Solutions</span></h2>
             </div>
             <div className="text-data" style={{ fontSize: 15, color: 'var(--gray)', marginBottom: 20 }}>
-              <p>Elevate your culinary creations with our carefully curated ground spices that bring centuries of tradition and rich aromas to your kitchen.</p>
+              <p>High conductivity Copper Bonded Rods, Chemical Electrodes, and Earth Pit accessories designed for optimal low-impedance grounding.</p>
             </div>
             <div className="green-link-with-arrow">
               <a href="#products">
@@ -28,13 +27,13 @@ export default function CategoryGroundSpices({ onSelectProduct }) {
               </a>
             </div>
             <div className="products-left-img" style={{ backgroundColor: '#FFFFFF', padding: 12, borderRadius: 16, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img src={groundSpices[0]?.image} alt="Ground Spices Category" loading="lazy" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+              <img src={earthingProducts[0]?.image} alt="Earthing Solutions Category" loading="lazy" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
             </div>
           </div>
 
           <div className="products-right">
             <div className="products-4-grid">
-              {groundSpices.map((item, idx) => (
+              {earthingProducts.map((item, idx) => (
                 <div key={idx} className="prodcuts-box" onClick={() => onSelectProduct ? onSelectProduct(item) : null}>
                   <div className="img" style={{ backgroundColor: '#FFFFFF', padding: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <img src={item.image} alt={item.title} loading="lazy" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />

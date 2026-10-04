@@ -1,120 +1,73 @@
 // Central Blog Dataset for Priya Impex
-// Featuring authentic products & real product photos from src/assets/products
+// Technical Guides & Signature Products Engineering Knowledge
 
-import turmericPowder from '../assets/products/Turmeric Powder.webp';
-import chilliPowder from '../assets/products/Chilli Powder.webp';
-import cuminSeeds from '../assets/products/Cumin Seeds.webp';
-import blackPepper from '../assets/products/Black Pepper.webp';
-import corianderPowder from '../assets/products/Coriander Powder.webp';
-import fennelSeeds from '../assets/products/Fennel Seeds.webp';
+import hotLineClampImg from '../assets/signture products/Hot Line Clamp.png';
+import brassSwitchgearCrankImg from '../assets/signture products/Brass Switchgear Clip Crank with Assambly.png';
+import earthReturnBrushImg from '../assets/signture products/EARTH RETURN BRUSH WITH BRUSH HOLDER ASSEMBLY.png';
 
 export const BLOGS = [
   {
     id: 1,
-    cat: 'Product Guide',
-    date: 'Aug 02, 2026',
+    cat: 'Signature Product & Overhead Grid',
+    date: 'Oct 02, 2026',
     read: '5 min read',
-    title: 'The Golden Spice: Sourcing High-Curcumin Indian Turmeric Powder',
-    excerpt: 'Discover why Indian turmeric milled from Erode and Sangli curcuma roots is globally preferred for food, pharmaceutical, and dietary supplement industries.',
-    image: turmericPowder,
-    body: `Indian Turmeric Powder (Curcuma Longa) is celebrated globally for its high active curcuminoid levels, deep golden tint, and warm earthy flavor.
+    title: 'Live-Line Overhead Distribution: Engineering Principles of Heavy Duty Hot Line Tap Clamps',
+    excerpt: 'Explore the mechanical torque dynamics, alloy selection, and conductivity engineering behind Priya Impex’s heavy-duty hot line tap clamps for energized overhead power lines and transformer tap-offs.',
+    image: hotLineClampImg,
+    body: `Live-line hot line tap clamps are critical electrical safety and distribution components utilized across utility overhead transmission lines, transformer tap-offs, and surge arrester connections without interrupting power supply.
 
-Key Quality Markers for Importers:
-• Curcumin Content: Premium export-grade turmeric powder contains curcumin levels above 3.5% (Erode & Sangli origins).
-• Moisture Level: Kept strictly below 10% to prevent fungal spoilage during maritime transit.
-• Sifting & Cleanliness: Double-sifted through 80-mesh stainless steel screens for ultra-fine consistency.
+Key Engineering Highlights:
+• High Mechanical Clamping Torque: Designed with precision-machined threads and a spring-assisted duckbill jaw mechanism that prevents loosening from wind vibration, thermal expansion, and line galloping.
+• High-Conductivity Bronze & Brass Alloys: In-house foundry cast from high copper alloy (Cu > 85%) ensuring supreme electrical conductivity and low contact resistance during heavy current transfer.
+• Corona Suppression & Smooth Contours: Aerodynamic smooth radii prevent local corona discharge, radio interference, and localized overheating under high-voltage energized lines.
+• Live-Line Hot Stick Compatibility: Ergonomic eye-screw mechanism engineered for seamless engagement and tightening using standard insulated shotgun hot sticks.
 
-Processing & Export Packaging:
-At Priya Impex, raw turmeric rhizomes undergo steam boiling, sun curing, double polishing, and cool-temperature milling. Finished powder is sealed in multi-layer vacuum pouches or 25kg PP bags to protect volatile oils from UV light and humidity.`
+Quality & Testing Compliance:
+Every batch of Priya Impex Hot Line Tap Clamps undergoes strict torque-withstand testing, temperature-rise testing, and millivolt drop verification compliant with ANSI C119.4 and IEC international utility standards.`
   },
   {
     id: 2,
-    cat: 'Quality Benchmark',
-    date: 'Jul 26, 2026',
+    cat: 'Signature Specialty & Switchgear',
+    date: 'Sep 25, 2026',
     read: '6 min read',
-    title: 'A Guide to Indian Red Chilli Powder: ASTA Color vs Pungency (SHU)',
-    excerpt: 'Understanding Guntur S17 Teja heat levels vs Kashmiri deep red ASTA color ratings for commercial food manufacturing and international spice blends.',
-    image: chilliPowder,
-    body: `India produces over 45% of the world's red chilli supply, ranging from mild sweet paprika types to intensely fiery capsicum varieties.
+    title: 'Fail-Safe High Voltage Switching: Inside Precision Brass Switchgear Clip Crank Mechanism Assemblies',
+    excerpt: 'India’s Precision Manufacturing Specialty: How Priya Impex engineered the perfect Brass Switchgear Clip Crank Assembly after major power equipment giants struggled to get it manufactured anywhere else in India.',
+    image: brassSwitchgearCrankImg,
+    body: `In medium and high-voltage switchgear installations (11kV to 132kV), disconnectors, and air circuit breakers, mechanical linkage reliability is crucial for operator safety and instantaneous arc quenching.
 
-Evaluating Chilli Powder Parameters:
-1. ASTA Color Value (80 – 160): Measures extractable red pigment. Kashmiri chilli powder yields high ASTA (130+) with low pungency.
-2. Pungency in SHU (20,000 – 50,000): Measures capsaicin heat content. Guntur S17 and Teja chillies dominate high-heat formulations.
-3. Safety Standards: Strict testing for Aflatoxin B1/G1, Ochratoxin A, and pesticide residue levels (MRLs).
+⭐ Our Speciality in India — Solving an Industry-Wide Engineering Challenge:
+This precision component stands as a prime testament to Priya Impex’s advanced tooling and manufacturing mastery. A prominent, large-scale electrical equipment enterprise had repeatedly attempted to manufacture this complex Brass Switchgear Clip Crank Assembly through various vendors across India. Due to intricate multi-axis angular tolerances, severe mechanical torque demands, and strict anti-backlash criteria, other suppliers were unable to meet the required quality standards.
 
-Export Advantage:
-Priya Impex provides both stemless whole dried red chillies and micro-milled red chilli powder with laboratory Certificate of Analysis (COA) for ASTA color and SHU pungency.`
+Priya Impex took on the R&D and precision forging challenge. Our in-house engineering and CNC tooling team perfected the die design, alloy formulation, and multi-axis VMC machining process — delivering the exact, flawless assembly the client required. Today, Priya Impex is widely recognized as a premier specialized manufacturer in India for this critical switchgear mechanism.
+
+Mechanism Assembly Features:
+• Forged High-Tensile Brass (CW617N / IS 319): High yield strength prevents mechanical deformation under repeated spring-charged rapid breaker opening and closing operations.
+• Tight Micro-Tolerances (±0.01mm): High-speed multi-axis CNC and VMC turning guarantees zero angular play or backlash, ensuring precise mechanical interlocking and contact alignment.
+• Self-Lubricating & Non-Galling Properties: Brass-on-steel linkages eliminate galling or cold welding over decades of outdoor exposure in corrosive substation atmospheres.
+• Corrosion-Resistant Plating Options: Available with natural brass passivated, heavy nickel plating, or electro-tinning to withstand high-humidity and industrial chemical environments.
+
+Applications:
+Substation disconnectors, load break switches, railway catenary isolators, and industrial motor control center (MCC) switchboards.`
   },
   {
     id: 3,
-    cat: 'Market Insights',
-    date: 'Jul 18, 2026',
-    read: '4 min read',
-    title: 'Exporting Cumin Seeds (Jeera): Singapore 99.5% vs Europe Quality Grades',
-    excerpt: 'Unjha, Gujarat is the world\'s largest trading hub for cumin. Learn about purity sorting, machine cleaning, and steam sterilization export standards.',
-    image: cuminSeeds,
-    body: `Cumin seeds (Cuminum cyminum) from Gujarat and Rajasthan are famed for their high essential thymol oil content, pale greenish-brown color, and intense warm aroma.
-
-Commercial Export Grades:
-• Singapore Grade (99.0% / 99.5% Purity): Machine-cleaned and Sortex color sorted with foreign matter <0.5%.
-• Europe Grade (99.9% Purity): Steam sterilized or ETO treated for low microbial count (TPC) required by EU and USA importers.
-
-Global Logistics:
-Cumin seeds are packed in 25kg / 50kg PP woven sacks with food-grade inner polyethylene liners to retain volatile aroma during containerized maritime shipment.`
-  },
-  {
-    id: 4,
-    cat: 'Spice Profile',
-    date: 'Jul 10, 2026',
-    read: '5 min read',
-    title: 'The King & Queen of Spices: Tellicherry Black Pepper & Green Cardamom',
-    excerpt: 'How Kerala\'s Western Ghats produce extra bold Tellicherry peppercorns and 8mm+ green cardamom loaded with sweet essential oils.',
-    image: blackPepper,
-    body: `Black Pepper (Tellicherry MG1) and Green Cardamom (8mm Bold) are known as the King and Queen of Indian spices, grown in the mist-covered Western Ghats of Kerala.
-
-Black Pepper Quality Metrics:
-• Bulk Density: Standard export density ranges between 550 g/l to 580 g/l.
-• Piperine Content: > 4.0% for sharp biting pungency and essential oil notes.
-
-Green Cardamom Pods:
-• Pod Size: 8mm+ Extra Bold green pods with fully developed dark seeds inside.
-• Aroma Profile: Sweet camphorous notes due to high cineole and terpinyl acetate oils.
-
-Priya Impex exports whole sun-dried Tellicherry black peppercorns and handpicked 8mm green cardamom pods in master cartons.`
-  },
-  {
-    id: 5,
-    cat: 'Commercial Blends',
-    date: 'Jun 28, 2026',
-    read: '4 min read',
-    title: 'Mastering Indian Spice Blends: Bulk Garam Masala & Biryani Formulations',
-    excerpt: 'Custom OEM blending recipes combining whole cardamom, cloves, cinnamon quills, and mace for international restaurants and food manufacturing.',
-    image: corianderPowder,
-    body: `Indian ground spices offer food manufacturers and restaurant chains a consistent, authentic flavor profile without complex manual spice grinding.
-
-Key Blend Profiles:
-• Royal Garam Masala: Balance of ground cardamom, cloves, cinnamon, cumin, black pepper, and nutmeg.
-• Hyderabadi Biryani Mix: Fragrant blend of mace, star anise, cardamoms, and caraway seeds.
-• Madras Curry Powder: Mild golden spice mix with coriander, turmeric, mustard, and ginger.
-
-Priya Impex specializes in custom formulation, bulk grinding, and private-label packaging for international food distributors.`
-  },
-  {
-    id: 6,
-    cat: 'Exotic Spices',
-    date: 'Jun 15, 2026',
+    cat: 'Signature Product & Railway Traction',
+    date: 'Sep 18, 2026',
     read: '6 min read',
-    title: 'Pure Kashmiri Saffron: Sourcing Mongra Grade 1 Stigmas & Powder',
-    excerpt: 'Identifying authentic Pampore Kashmiri Mongra saffron stigmas with intense floral aroma, high crocin color strength, and natural purity.',
-    image: fennelSeeds,
-    body: `Kashmiri Saffron (Crocus sativus) grown in Pampore soils is globally renowned as the highest quality saffron due to its deep crimson red threads and extraordinary crocin pigment levels.
+    title: 'Railway Traction & Rolling Stock Grounding: Earth Return Brush with Spring-Loaded Holder Assemblies',
+    excerpt: 'Protecting axle bearings from electrical erosion: The critical role of high-current earth return brush assemblies in modern electric locomotives, high-speed rail, and rotating machinery.',
+    image: earthReturnBrushImg,
+    body: `In electrified railway rolling stock (locomotives, EMUs, and metro trainsets), return propulsion currents and short-circuit fault currents naturally seek ground through wheelsets. Without dedicated earth return brushes, currents arc across axle bearings, causing catastrophic electrical fluting and bearing failure.
 
-Saffron Testing Standard (ISO 3632):
-• Crocin (Coloring Strength): > 240 for Grade 1 Mongra saffron.
-• Safranal (Aroma Value): > 30 for rich floral fragrance.
-• Picrocrocin (Flavor / Bitterness): > 80.
+Engineering Architecture:
+• Spring-Loaded Constant Force Holder: Heavy-duty cast brass/bronze holder assembly with calibrated constant-force torsion springs ensures continuous, stable brush pressure against rotating axle shafts.
+• High-Current Copper-Graphite Brushes: Low-friction, high-conductivity composite brush material delivers high current carrying capacity (>1000A fault peaks) with minimal contact voltage drop.
+• Flexible Braided Copper Shunts: Ultra-fine pure copper braided leads insulated against vibrations provide an unimpeded low-resistance path directly to locomotive chassis grounding.
+• Wear Indicator & Easy Maintenance: Integrated visual brush wear markers enable rapid inspection during scheduled railway depot maintenance cycles.
 
-Handling & Protection:
-Due to high value, Kashmiri saffron is packed in sealed acrylic containers or metallic tins to prevent moisture absorption and light degradation.`
+Field Applications:
+High-speed passenger trains, heavy freight electric locomotives, urban metro rail bogies, wind turbine generator shaft grounding, and marine propeller shaft grounding.`
   }
 ];
+
+

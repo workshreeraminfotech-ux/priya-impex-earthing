@@ -18,7 +18,7 @@ export default function AnnouncementBar() {
 
         <div className="announcement-center-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(200, 148, 10, 0.15)', border: '1px solid rgba(200, 148, 10, 0.4)', padding: '3px 12px', borderRadius: '100px', fontSize: '12px', color: 'var(--gold-light)', fontWeight: 600 }}>
           <span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: '#22c55e', animation: 'pulse 1.5s infinite' }}></span>
-          <span>🚢 <strong>Live Milestone:</strong> 100% Full Container Cargo Exported & Dispatched to Malaysia! 🇲🇾</span>
+          <span>🏭 <strong>25+ Years Manufacturing Heritage:</strong> Direct Export of Earthing & Brass Components! 🚢</span>
         </div>
 
         <div className="announcement-right">
@@ -33,7 +33,7 @@ export default function AnnouncementBar() {
             <a href="https://in.linkedin.com/company/priyaimpex-india" target="_blank" rel="noopener noreferrer" className="social-icon" title="LinkedIn">
               <Linkedin size={14} />
             </a>
-            <a href="https://api.whatsapp.com/send?phone=919328602931&text=Hi%20Priya%20Impex!%20I%20would%20like%20to%20enquire%20about%20your%20wholesale%20Indian%20spices." target="_blank" rel="noopener noreferrer" className="social-icon" title="Business WhatsApp">
+            <a href="https://api.whatsapp.com/send?phone=919328602931&text=Hi%20Priya%20Impex!%20I%20would%20like%20to%20enquire%20about%20your%20Earthing%20Parts%20and%20Brass%20Components." target="_blank" rel="noopener noreferrer" className="social-icon" title="Business WhatsApp">
               <MessageCircle size={14} />
             </a>
           </div>

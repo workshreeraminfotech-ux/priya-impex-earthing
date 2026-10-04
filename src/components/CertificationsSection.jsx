@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Sparkles, X, ShieldCheck } from 'lucide-react';
 import { useStoreCertificates } from '../utils/useStore';
 
-export default function CertificationsSection({ bgColor = 'var(--cream)' }) {
+export default function CertificationsSection({ bgColor = '#FFFFFF' }) {
   const rawCerts = useStoreCertificates();
   const certs = Array.isArray(rawCerts) ? rawCerts : [];
   const [selectedCert, setSelectedCert] = useState(null);
@@ -19,23 +19,23 @@ export default function CertificationsSection({ bgColor = 'var(--cream)' }) {
           {/* Eyebrow Badge */}
           <span className="eyebrow" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
             <Sparkles size={13} color="var(--gold)" />
-            <span>TRUSTED & GOVT. AUTHORIZED</span>
+            <span>TRUSTED & GLOBALLY COMPLIANT</span>
           </span>
 
           {/* Main Title */}
           <h2 style={{ marginTop: '6px' }}>
-            Official International <span>Certifications & Approvals</span>
+            Official International <span>Standards & Quality Approvals</span>
           </h2>
 
           {/* Subtitle */}
           <p style={{ fontSize: '15px', color: 'var(--gray)', lineHeight: 1.6, margin: '10px auto 0', maxWidth: '620px' }}>
-            Certified by India's premier export authorities & global food safety councils guaranteeing 100% regulatory compliance.
+            Manufactured in compliance with IEC 62561, IEEE 80, BS 7430, and ISO 9001:2015 quality standards with 100% Material Test Certificates (MTC).
           </p>
         </div>
 
       </div>
 
-      {/* Hardware-Accelerated Auto Horizontal Scrolling Marquee (Works 100% on Mobile & Desktop) */}
+      {/* Hardware-Accelerated Auto Horizontal Scrolling Marquee */}
       <div className="certs-marquee-wrapper">
         <div className="certs-marquee-track">
           {marqueeCerts.map((c, i) => (

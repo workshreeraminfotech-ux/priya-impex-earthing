@@ -19,7 +19,7 @@ export default function ContactSection() {
       name: form.name,
       email: form.email,
       phone: `${form.countryCode} ${form.phone}`,
-      product: form.product || 'General Enquiry',
+      product: form.product || 'General Earthing & Brass Enquiry',
       notes: form.message
     });
     setSubmitted(true);
@@ -37,7 +37,7 @@ export default function ContactSection() {
         >
           <span className="eyebrow">Get In Touch</span>
           <h2>Contact <span>Us</span></h2>
-          <p>Reach out for bulk enquiries, export quotes or product samples. We respond within 24 hours.</p>
+          <p>Reach out for bulk enquiries, custom OEM drawings, export quotes or product samples. We respond within 24 hours.</p>
         </motion.div>
 
         <div className="contact-grid">
@@ -75,17 +75,19 @@ export default function ContactSection() {
               <div className="form-group">
                 <label>Product Interest</label>
                 <select name="product" value={form.product} onChange={handleChange}>
-                  <option value="">Select a spice category</option>
-                  <option>Ground Spices</option>
-                  <option>Whole Spices</option>
-                  <option>Seed Spices</option>
-                  <option>Blended Spices</option>
-                  <option>Custom Spice Blend / Bulk Inquiry</option>
+                  <option value="">Select a product category</option>
+                  <option>Earthing Solutions</option>
+                  <option>Brass Components</option>
+                  <option>Earthing Accessories</option>
+                  <option>Copper Bonded Rods</option>
+                  <option>Chemical Earthing Electrodes</option>
+                  <option>Brass Cable Glands & Neutral Links</option>
+                  <option>Custom OEM Drawing Development</option>
                 </select>
               </div>
               <div className="form-group">
-                <label>Message / Enquiry *</label>
-                <textarea name="message" placeholder="Tell us about your requirements — quantity, packaging, destination..." value={form.message} onChange={handleChange} required />
+                <label>Message / Technical Enquiry *</label>
+                <textarea name="message" placeholder="Tell us about your requirements — quantity, drawings, packaging, destination port..." value={form.message} onChange={handleChange} required />
               </div>
             {submitted ? (
               <div style={{ backgroundColor: '#D1FAE5', border: '1px solid #6EE7B7', color: '#065F46', padding: '20px', borderRadius: '16px', textAlign: 'center', fontWeight: 700, marginBottom: '20px' }}>
@@ -117,8 +119,8 @@ export default function ContactSection() {
               <div className="contact-info-item">
                 <div className="ci-icon"><MapPin size={18} /></div>
                 <div className="ci-text">
-                  <strong>Rajkot, Gujarat, India</strong>
-                  <span>Export Hub — Rajkot Port Access</span>
+                  <strong>Rajkot / Jamnagar, Gujarat, India</strong>
+                  <span>Manufacturing & Export Hub</span>
                 </div>
               </div>
             </div>
@@ -133,10 +135,11 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119067.87434720948!2d70.7284077!3d22.2736308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c98ac71cdf0f%3A0x76dd15cfbe93ad3b!2sRajkot%2C+Gujarat!5e0!3m2!1sen!2sin!4v1600000000000"
-              title="Priya Impex Location - Rajkot, Gujarat"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14773.541650390625!2d70.749955!3d22.2169633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cb3d78dee229%3A0xadcc6d50aecbd1b2!2sPRIYA%20IMPEX!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+              title="PRIYA IMPEX - Official Factory & Export Office Location"
               allowFullScreen
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </motion.div>
         </div>

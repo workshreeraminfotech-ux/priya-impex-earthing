@@ -25,6 +25,41 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [productSearch, setProductSearch] = useState('');
 
+  const PAGE_SEO = {
+    home: {
+      title: 'Priya Impex — Precision Earthing Solutions & Brass Parts Manufacturer & Exporter | Gujarat, India',
+      desc: '25+ years manufacturer and direct export house of Earthing Parts, Copper Bonded Rods (254 Micron), Chemical Electrodes, and Precision Brass Components based in Rajkot & Jamnagar, Gujarat.'
+    },
+    about: {
+      title: 'About Us — 25+ Years Manufacturing Heritage in Rajkot & Jamnagar | Priya Impex',
+      desc: 'Discover Priya Impex industrial infrastructure: Unit 1 Earthing Plant in Rajkot, Unit 2 Brass Foundry & CNC Hub in Jamnagar, and direct export operations worldwide.'
+    },
+    products: {
+      title: 'Our Products — Earthing Parts, Grounding Rods & CNC Brass Components | Priya Impex',
+      desc: 'Explore 50+ export-grade earthing and precision brass components: Hot Line Clamps, Switchgear Clip Crank Assemblies, Copper Bonded Rods, Cable Glands, Neutral Links, and Custom OEM parts.'
+    },
+    blog: {
+      title: 'Latest Engineering Blogs & Technical Guides | Priya Impex',
+      desc: 'Engineering guides on live-line hot line tap clamps, switchgear clip crank mechanism assemblies, railway earth return brushes, and IEC 62561 compliance.'
+    },
+    contact: {
+      title: 'Contact Priya Impex — Request Factory RFQ & Export Quotations | Rajkot, Gujarat',
+      desc: 'Submit RFQ and export inquiries for copper bonded rods, chemical earthing electrodes, and precision brass parts. Factory direct pricing and seaworthy shipping from Gujarat ports.'
+    }
+  };
+
+  // Synchronize document title and meta description dynamically on page change
+  useEffect(() => {
+    const seo = PAGE_SEO[activePage] || PAGE_SEO.home;
+    document.title = seo.title;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', seo.desc);
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', seo.title);
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', seo.desc);
+  }, [activePage]);
+
   // 10-Second Auto Popup for Brochure
   useEffect(() => {
     const timer = setTimeout(() => {

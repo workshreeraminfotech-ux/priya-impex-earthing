@@ -6,32 +6,32 @@ import AnimatedCounter from './AnimatedCounter';
 export default function CounterSection() {
   const stats = [
     {
-      end: 100,
-      suffix: '%',
-      title: 'Container Shipment Dispatched',
-      icon: Ship,
-      desc: 'Recently Shipped Container to Malaysia 🇲🇾'
-    },
-    {
-      end: 100,
-      suffix: '%',
-      title: 'On-Time Container Delivery',
-      icon: ShieldCheck,
-      desc: 'Seamless port & customs clearing'
-    },
-    {
-      end: 99,
-      suffix: '%+',
-      title: 'Sortex Purity Standards',
+      end: 25,
+      suffix: '+',
+      title: 'Years Manufacturing Heritage',
       icon: Award,
-      desc: 'Machine graded & optical sorted'
+      desc: 'Precision Earthing & Brass parts'
     },
     {
       end: 100,
       suffix: '%',
-      title: 'Quality & Purity Compliance',
+      title: 'Quality & Conductivity Tested',
+      icon: ShieldCheck,
+      desc: 'IEC, IEEE & BS Standard compliance'
+    },
+    {
+      end: 100,
+      suffix: '+ MT',
+      title: 'Monthly Production Capacity',
       icon: Building2,
-      desc: 'Lab tested & export certified'
+      desc: 'In-house foundry & CNC machining'
+    },
+    {
+      end: 100,
+      suffix: '%',
+      title: 'On-Time Container Dispatch',
+      icon: Ship,
+      desc: 'Mundra & Pipavav port clearance'
     }
   ];
 
@@ -68,4 +68,3 @@ export default function CounterSection() {
     </section>
   );
 }
-

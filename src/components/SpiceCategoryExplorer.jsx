@@ -9,40 +9,40 @@ import groundSpicesImg from '../assets/categories/ground-spices.webp';
 
 const CATEGORIES_DATA = [
   {
-    id: 'all-spices',
-    title: 'All Spices',
-    subtitle: 'Complete 13+ Whole, Seed & Ground Export Range',
+    id: 'all-products',
+    title: 'All Products',
+    subtitle: 'Complete 13+ Earthing & Precision Brass Export Range',
     category: 'All',
     search: '',
     image: allSpicesImg,
     tag: 'Full Catalogue'
   },
   {
-    id: 'seed-spices',
-    title: 'Seed Spices',
-    subtitle: 'Sortex Cleaned Cumin Jeera, Coriander & Fennel',
-    category: 'Seed Spices',
+    id: 'earthing-solutions',
+    title: 'Earthing Solutions',
+    subtitle: 'Copper Bonded Rods, Chemical Electrodes & Pit Covers',
+    category: 'Earthing Solutions',
     search: '',
     image: seedSpicesImg,
-    tag: 'Sortex Cleaned'
+    tag: 'UL / IEC Standard'
   },
   {
-    id: 'whole-spices',
-    title: 'Whole Spices',
-    subtitle: 'Black Pepper, Dry Red Chilli & Turmeric Fingers',
-    category: 'Whole Spices',
+    id: 'brass-components',
+    title: 'Brass Components',
+    subtitle: 'Brass Cable Glands, Neutral Links & Terminal Bars',
+    category: 'Brass Components',
     search: '',
     image: wholeSpicesImg,
-    tag: '100% Sun-Dried'
+    tag: 'Precision CNC'
   },
   {
-    id: 'ground-spices',
-    title: 'Ground Spices',
-    subtitle: 'Double-Sifted Turmeric, Chilli & Cumin Powders',
-    category: 'Ground Spices',
+    id: 'earthing-accessories',
+    title: 'Earthing Accessories',
+    subtitle: 'Rod-to-Tape Clamps, Lightning Spikes & Split Bolts',
+    category: 'Earthing Accessories',
     search: '',
     image: groundSpicesImg,
-    tag: 'Ultra-Fine Mesh'
+    tag: 'High Tensile'
   }
 ];
 
@@ -75,7 +75,7 @@ export default function SpiceCategoryExplorer({ onNavigate }) {
             marginBottom: '12px' 
           }}>
             <Sparkles size={14} color="#C8940A" />
-            <span>EXPLORE BY SPICE CATEGORIES</span>
+            <span>EXPLORE BY PRODUCT CATEGORIES</span>
           </div>
 
           <h2 style={{ 
@@ -86,15 +86,15 @@ export default function SpiceCategoryExplorer({ onNavigate }) {
             lineHeight: 1.2, 
             margin: '0 0 12px' 
           }}>
-            Choose Your <span style={{ color: 'var(--gold)' }}>Spice Category</span>
+            Choose Your <span style={{ color: 'var(--gold)' }}>Product Category</span>
           </h2>
 
           <p style={{ fontSize: '15.5px', color: 'var(--gray)', lineHeight: 1.6, margin: '0 auto', maxWidth: '620px' }}>
-            Select any spice category below to explore our complete wholesale export catalogue with verified purity testing.
+            Select any product category below to explore our complete wholesale export catalogue with verified conductivity & dimensional testing.
           </p>
         </div>
 
-        {/* 4 Category Cards Grid — Brand Logo Palette (Navy #0B2240 + Gold #C8940A + Clean Pure White) */}
+        {/* 4 Category Cards Grid */}
         <div className="category-explorer-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -198,7 +198,7 @@ export default function SpiceCategoryExplorer({ onNavigate }) {
                 </p>
               </div>
 
-              {/* Bottom Spice Bowl Photo matching reference design */}
+              {/* Bottom Visual */}
               <div style={{
                 position: 'relative',
                 width: '100%',

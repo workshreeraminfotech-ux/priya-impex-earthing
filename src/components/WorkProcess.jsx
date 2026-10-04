@@ -2,12 +2,12 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import {
   FileCheck2,
-  Sprout,
   Cpu,
   Microscope,
   PackageCheck,
   Ship,
-  Sparkles
+  Sparkles,
+  Factory
 } from 'lucide-react';
 
 export default function WorkProcess() {
@@ -30,52 +30,51 @@ export default function WorkProcess() {
       id: 1,
       num: '01',
       stepText: 'Step 1',
-      title: 'Order Booking and Conformation',
+      title: 'Drawing Review & Order Confirmation',
       icon: FileCheck2
     },
     {
       id: 2,
       num: '02',
       stepText: 'Step 2',
-      title: 'Direct APMC Mandi & Farm Sourcing',
-      icon: Sprout
+      title: 'In-House Foundry Casting & Extrusion',
+      icon: Factory
     },
     {
       id: 3,
       num: '03',
       stepText: 'Step 3',
-      title: 'Sortex Cleaning, Grading & Processing',
+      title: 'Precision CNC Machining & Copper Bonding',
       icon: Cpu
     },
     {
       id: 4,
       num: '04',
       stepText: 'Step 4',
-      title: 'Laboratory Testing & Export Certifications',
+      title: 'Conductivity, Tensile & Micron Testing',
       icon: Microscope
     },
     {
       id: 5,
       num: '05',
       stepText: 'Step 5',
-      title: 'Hygienic Bulk Packaging & Stuffing',
+      title: 'Seaworthy Heavy Pallet Packaging & Stuffing',
       icon: PackageCheck
     },
     {
       id: 6,
       num: '06',
       stepText: 'Step 6',
-      title: 'Port Customs, Ocean Freight & Delivery',
+      title: 'Port Customs, Ocean Freight & Global Delivery',
       icon: Ship
     }
   ];
 
-  // SVG Wave Path coordinates: M 400 30 C 400 70, 240 90, 240 150 C 240 210, 560 230, 560 290 ...
   const desktopWavePath = "M 400 30 C 400 75, 230 95, 230 155 C 230 215, 570 235, 570 295 C 570 355, 230 375, 230 435 C 230 495, 570 515, 570 575 C 570 635, 230 655, 230 715 C 230 775, 570 795, 570 855 C 570 915, 400 935, 400 970";
   const mobileWavePath = "M 32 20 C 48 55, 16 95, 32 135 C 48 175, 16 215, 32 255 C 48 295, 16 335, 32 375 C 48 415, 16 455, 32 495 C 48 535, 16 575, 32 615 C 48 655, 16 695, 32 735 C 48 775, 32 805, 32 830";
 
   return (
-    <section className="wave-roadmap-section" id="process" ref={containerRef}>
+    <section className="wave-roadmap-section" id="process" ref={containerRef} style={{ background: '#FFFFFF' }}>
       <div className="container">
         
         {/* Header */}
@@ -83,17 +82,15 @@ export default function WorkProcess() {
           <div className="roadmap-eyebrow-wrap">
             <span className="roadmap-badge-glow">
               <Sparkles size={14} className="sparkle-icon" />
-              ORDER-TO-DELIVERY ROADMAP
+              MANUFACTURING & EXPORT WORKFLOW
             </span>
           </div>
           <h2 className="roadmap-title">
-            Our Export Journey: <span className="gold-gradient-text">Step-by-Step Timeline</span>
+            Our Manufacturing Journey: <span className="gold-gradient-text">Step-by-Step Timeline</span>
           </h2>
         </div>
 
-        {/* ========================================================
-            WAVE SHAPE SCROLL-FILL TIMELINE
-            ======================================================== */}
+        {/* WAVE SHAPE SCROLL-FILL TIMELINE */}
         <div className="wave-timeline-container">
           
           {/* Desktop SVG Wave */}
@@ -172,16 +169,36 @@ export default function WorkProcess() {
           <div className="wave-steps-list">
             {steps.map((step, idx) => {
               const Icon = step.icon;
-              const isEven = idx % 2 === 1; // Alternates left/right on desktop
+              const isEven = idx % 2 === 1;
 
               return (
                 <motion.div
                   key={step.id}
                   className={`wave-step-row ${isEven ? 'row-right' : 'row-left'}`}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.45, delay: 0.06 }}
+                  initial={{ 
+                    opacity: 0, 
+                    x: isEven ? 60 : -60, 
+                    y: 20,
+                    scale: 0.94 
+                  }}
+                  whileInView={{ 
+                    opacity: 1, 
+                    x: 0, 
+                    y: 0,
+                    scale: 1 
+                  }}
+                  viewport={{ 
+                    once: false, 
+                    amount: 0.35,
+                    margin: "0px 0px -60px 0px"
+                  }}
+                  transition={{ 
+                    type: "spring",
+                    stiffness: 110,
+                    damping: 20,
+                    mass: 0.7,
+                    delay: 0.05
+                  }}
                 >
                   {/* Step Card */}
                   <div className="wave-step-card">
@@ -194,13 +211,6 @@ export default function WorkProcess() {
                         <Icon size={22} className="wave-card-icon" />
                       </div>
                       <h3 className="wave-step-title">{step.title}</h3>
-                    </div>
-                  </div>
-
-                  {/* Center Node Indicator on Wave */}
-                  <div className="wave-step-node-point">
-                    <div className="wave-point-circle">
-                      <span className="wave-point-num">{step.num}</span>
                     </div>
                   </div>
                 </motion.div>

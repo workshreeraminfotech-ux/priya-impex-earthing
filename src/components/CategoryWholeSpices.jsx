@@ -3,10 +3,9 @@ import { ArrowRight } from 'lucide-react';
 import { useStoreProducts } from '../utils/useStore';
 
 export default function CategoryWholeSpices({ onSelectProduct }) {
-  // Find featured whole spices from central database safely
   const prods = useStoreProducts();
-  const wholeSpices = (Array.isArray(prods) ? prods : [])
-    .filter(p => p && (p.category === 'Whole Spices' || p.cat === 'Whole Spices'))
+  const brassProducts = (Array.isArray(prods) ? prods : [])
+    .filter(p => p && (p.category === 'Brass Components' || p.cat === 'Brass Components'))
     .slice(0, 4);
 
   return (
@@ -16,10 +15,10 @@ export default function CategoryWholeSpices({ onSelectProduct }) {
           <div className="products-left">
             <div className="section-title left-align">
               <span className="ph-eyebrow">Our Products</span>
-              <h2>Whole <span>Spices</span></h2>
+              <h2>Brass <span>Components</span></h2>
             </div>
             <div className="text-data" style={{ fontSize: 15, color: 'var(--gray)', marginBottom: 20 }}>
-              <p>Discover the true essence of authentic flavors with our premium whole spices. Each spice carries rich essential oils and aroma directly from Indian farms.</p>
+              <p>Precision CNC-turned brass cable glands, neutral links, and electrical terminal connectors manufactured with tight tolerances.</p>
             </div>
             <div className="green-link-with-arrow">
               <a href="#products">
@@ -28,13 +27,13 @@ export default function CategoryWholeSpices({ onSelectProduct }) {
               </a>
             </div>
             <div className="products-left-img" style={{ backgroundColor: '#FFFFFF', padding: 12, borderRadius: 16, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img src={wholeSpices[0]?.image} alt="Whole Spices Category" loading="lazy" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+              <img src={brassProducts[0]?.image} alt="Brass Components Category" loading="lazy" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
             </div>
           </div>
 
           <div className="products-right">
             <div className="products-4-grid">
-              {wholeSpices.map((item, idx) => (
+              {brassProducts.map((item, idx) => (
                 <div key={idx} className="prodcuts-box" onClick={() => onSelectProduct ? onSelectProduct(item) : null}>
                   <div className="img" style={{ backgroundColor: '#FFFFFF', padding: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <img src={item.image} alt={item.title} loading="lazy" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />

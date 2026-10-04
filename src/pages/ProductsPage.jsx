@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, ArrowRight, Sparkles, Filter, CheckCircle2 } from 'lucide-react';
+import { Search, ArrowRight, Filter } from 'lucide-react';
 import { PRODUCT_CATEGORIES } from '../data/products';
 import { useStoreProducts } from '../utils/useStore';
 
@@ -46,7 +46,7 @@ export default function ProductsPage({ onSelectProduct, onOpenQuote, initialCate
   return (
     <div style={{ backgroundColor: '#F8FAFC', minHeight: '100vh', paddingBottom: '100px' }}>
 
-      {/* Dynamic Hero Section — Guaranteed Background Image Overlay */}
+      {/* Dynamic Hero Section */}
       <section style={{
         position: 'relative',
         color: '#FFFFFF',
@@ -56,7 +56,7 @@ export default function ProductsPage({ onSelectProduct, onOpenQuote, initialCate
       }}>
         {/* Background Image */}
         <img
-          src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=70"
+          src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=70"
           alt="Products Catalogue Background"
           loading="lazy"
           decoding="async"
@@ -85,73 +85,17 @@ export default function ProductsPage({ onSelectProduct, onOpenQuote, initialCate
             transition={{ duration: 0.6 }}
             style={{ maxWidth: '840px', margin: '0 auto', textAlign: 'center' }}
           >
-            <span style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              backgroundColor: 'rgba(255, 255, 255, 0.12)',
-              border: '1.5px solid #F5C542',
-              color: '#F5C542',
-              fontSize: '12px',
-              fontWeight: 800,
-              textTransform: 'uppercase',
-              letterSpacing: '2px',
-              padding: '6px 20px',
-              borderRadius: '100px',
-              marginBottom: '20px',
-              backdropFilter: 'blur(6px)'
-            }}>
-              <Sparkles size={14} style={{ color: '#F5C542' }} />
-              100% Pure Indian Spices Exporter • {productsList.length} Products
-            </span>
-
             <h1 style={{
               fontFamily: 'var(--font-h, Outfit, sans-serif)',
-              fontSize: 'clamp(32px, 5vw, 54px)',
+              fontSize: 'clamp(34px, 5vw, 54px)',
               fontWeight: 900,
               lineHeight: 1.15,
-              marginBottom: '20px',
+              margin: 0,
               letterSpacing: '-0.5px',
               color: '#FFFFFF'
             }}>
-              Explore Our Complete <br />
-              <span style={{ color: '#F5C542' }}>Pure Indian Spices Catalogue</span>
+              Our <span style={{ color: '#F5C542' }}>Products</span>
             </h1>
-
-            <p style={{
-              fontSize: '17px',
-              color: 'rgba(255, 255, 255, 0.9)',
-              lineHeight: 1.6,
-              maxWidth: '720px',
-              margin: '0 auto 36px',
-              fontWeight: 500
-            }}>
-              High-purity Indian ground spices, whole spices, seed spices & custom blends packed for global export markets.
-            </p>
-
-            {/* Quick Stats Bar */}
-            <div style={{
-              display: 'flex',
-              justifyContent: 'center',
-              gap: '28px',
-              flexWrap: 'wrap',
-              fontSize: '14px',
-              color: '#FFFFFF',
-              fontWeight: 700
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(255, 255, 255, 0.1)', padding: '8px 18px', borderRadius: '100px', border: '1px solid rgba(245, 197, 66, 0.3)' }}>
-                <CheckCircle2 size={16} style={{ color: '#F5C542' }} />
-                <span>APEDA & Spice Board Certified</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(255, 255, 255, 0.1)', padding: '8px 18px', borderRadius: '100px', border: '1px solid rgba(245, 197, 66, 0.3)' }}>
-                <CheckCircle2 size={16} style={{ color: '#F5C542' }} />
-                <span>Custom Bulk Packaging</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(255, 255, 255, 0.1)', padding: '8px 18px', borderRadius: '100px', border: '1px solid rgba(245, 197, 66, 0.3)' }}>
-                <CheckCircle2 size={16} style={{ color: '#F5C542' }} />
-                <span>Global Container Exports</span>
-              </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -186,7 +130,7 @@ export default function ProductsPage({ onSelectProduct, onOpenQuote, initialCate
               <Search size={20} style={{ color: 'var(--gold)', flexShrink: 0 }} />
               <input
                 type="text"
-                placeholder="Search products by name or category (e.g. Turmeric, Pepper, Cumin, Saffron...)"
+                placeholder="Search products by name or category (e.g. Copper Bonded Rods, Cable Glands, Neutral Links...)"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 style={{
@@ -277,7 +221,7 @@ export default function ProductsPage({ onSelectProduct, onOpenQuote, initialCate
         {/* Counter Info */}
         <div style={{
           display: 'flex',
-          justify: 'space-between',
+          justifyContent: 'space-between',
           alignItems: 'center',
           marginBottom: '28px',
           padding: '0 4px'
@@ -307,135 +251,146 @@ export default function ProductsPage({ onSelectProduct, onOpenQuote, initialCate
 
         {/* Product Cards Grid */}
         <motion.div
-          layout
+          key={`${activeTab}_${searchTerm}`}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.25 }}
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
             gap: '28px'
           }}
         >
-          <AnimatePresence>
-            {filteredProducts.map((product, idx) => (
-              <motion.div
-                key={product.id || idx}
-                layout
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.35, delay: (idx % 6) * 0.05 }}
-                style={{
-                  backgroundColor: '#FFFFFF',
-                  borderRadius: '20px',
+          {filteredProducts.map((product, idx) => (
+            <div
+              key={product.id || `prod-${idx}`}
+              style={{
+                backgroundColor: '#FFFFFF',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                border: '1.5px solid var(--border)',
+                boxShadow: '0 8px 30px rgba(200, 148, 10, 0.06)',
+                display: 'flex',
+                flexDirection: 'column',
+                transition: 'transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-6px)';
+                e.currentTarget.style.boxShadow = '0 16px 40px rgba(200, 148, 10, 0.2)';
+                e.currentTarget.style.borderColor = 'var(--gold)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 8px 30px rgba(200, 148, 10, 0.06)';
+                e.currentTarget.style.borderColor = 'var(--border)';
+              }}
+              onClick={() => onSelectProduct ? onSelectProduct(product) : null}
+            >
+              {/* Product Image */}
+              <div style={{
+                position: 'relative',
+                height: '230px',
+                backgroundColor: '#FFFFFF',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '20px',
+                borderBottom: '1px solid var(--border)'
+              }}>
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  loading="lazy"
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain',
+                    transition: 'transform 0.4s ease'
+                  }}
+                  onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.06)'}
+                  onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                />
+
+                {/* Category Badge */}
+                <span style={{
+                  position: 'absolute',
+                  top: '12px',
+                  right: '12px',
+                  backgroundColor: 'var(--gold-pale)',
+                  color: 'var(--gold-deep)',
+                  fontSize: '11px',
+                  fontWeight: 800,
+                  padding: '4px 12px',
+                  borderRadius: '100px',
+                  border: '1px solid var(--gold-light)'
+                }}>
+                  {product.category}
+                </span>
+              </div>
+
+              {/* Body Content */}
+              <div style={{
+                padding: '22px',
+                display: 'flex',
+                flexDirection: 'column',
+                flex: 1
+              }}>
+                <h3 style={{
+                  fontFamily: 'var(--font-h, Outfit, sans-serif)',
+                  fontSize: '19px',
+                  fontWeight: 800,
+                  color: 'var(--navy)',
+                  marginBottom: '10px',
+                  lineHeight: 1.3
+                }}>
+                  {product.title}
+                </h3>
+
+                <p style={{
+                  fontSize: '13.5px',
+                  color: 'var(--gray)',
+                  lineHeight: 1.55,
+                  marginBottom: '20px',
+                  fontWeight: 500,
+                  display: '-webkit-box',
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: 'vertical',
                   overflow: 'hidden',
-                  border: '1.5px solid var(--border)',
-                  boxShadow: '0 8px 30px rgba(200, 148, 10, 0.06)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease',
-                  cursor: 'pointer'
-                }}
-                whileHover={{ y: -6, boxShadow: '0 16px 40px rgba(200, 148, 10, 0.2)', borderColor: 'var(--gold)' }}
-                onClick={() => onSelectProduct ? onSelectProduct(product) : null}
-              >
-                {/* Product Image — Object-Fit Contain (Uncropped) */}
-                <div style={{
-                  position: 'relative',
-                  height: '230px',
-                  backgroundColor: '#FFFFFF',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '20px',
-                  borderBottom: '1px solid var(--border)'
+                  textOverflow: 'ellipsis',
+                  minHeight: '42px',
+                  maxHeight: '42px'
                 }}>
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    loading="lazy"
-                    style={{
-                      maxWidth: '100%',
-                      maxHeight: '100%',
-                      objectFit: 'contain',
-                      transition: 'transform 0.4s ease'
+                  {product.description || product.desc}
+                </p>
+
+                {/* Action Button */}
+                <div style={{ marginTop: 'auto' }}>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (onOpenQuote) onOpenQuote(product.title);
                     }}
-                    onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.06)'}
-                    onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                  />
-
-                  {/* Category Badge */}
-                  <span style={{
-                    position: 'absolute',
-                    top: '12px',
-                    right: '12px',
-                    backgroundColor: 'var(--gold-pale)',
-                    color: 'var(--gold-deep)',
-                    fontSize: '11px',
-                    fontWeight: 800,
-                    padding: '4px 12px',
-                    borderRadius: '100px',
-                    border: '1px solid var(--gold-light)'
-                  }}>
-                    {product.category}
-                  </span>
+                    className="btn btn-primary"
+                    style={{
+                      width: '100%',
+                      padding: '12px 18px',
+                      fontSize: '14px',
+                      fontWeight: 700,
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      borderRadius: '10px'
+                    }}
+                  >
+                    <span>Request Quote</span>
+                    <ArrowRight size={15} />
+                  </button>
                 </div>
-
-                {/* Body Content — Clean Product Name & Description */}
-                <div style={{
-                  padding: '22px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  flex: 1
-                }}>
-                  <h3 style={{
-                    fontFamily: 'var(--font-h, Outfit, sans-serif)',
-                    fontSize: '19px',
-                    fontWeight: 800,
-                    color: 'var(--navy)',
-                    marginBottom: '10px',
-                    lineHeight: 1.3
-                  }}>
-                    {product.title}
-                  </h3>
-
-                  <p style={{
-                    fontSize: '13.5px',
-                    color: 'var(--gray)',
-                    lineHeight: 1.6,
-                    marginBottom: '20px',
-                    flex: 1,
-                    fontWeight: 500
-                  }}>
-                    {product.description || product.desc}
-                  </p>
-
-                  {/* Action Button */}
-                  <div style={{ marginTop: 'auto' }}>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        if (onOpenQuote) onOpenQuote(product.title);
-                      }}
-                      className="btn btn-primary"
-                      style={{
-                        width: '100%',
-                        padding: '12px 18px',
-                        fontSize: '14px',
-                        fontWeight: 700,
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '8px',
-                        borderRadius: '10px'
-                      }}
-                    >
-                      <span>Request Quote</span>
-                      <ArrowRight size={15} />
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+              </div>
+            </div>
+          ))}
         </motion.div>
 
         {/* Empty State */}

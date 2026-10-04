@@ -4,44 +4,44 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    name: 'Tan Sri Kumaravelan',
-    role: 'Director of Imports & Food Distribution',
-    location: 'Kuala Lumpur, Malaysia 🇲🇾',
+    name: 'Rajesh V. Patel',
+    role: 'Chief Project Engineer, Solar & Substation EPC',
+    location: 'Ahmedabad, Gujarat 🇮🇳',
     img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
     stars: 5,
-    text: 'Priya Impex has been our trusted Indian spice export partner. Their recent container shipment to Malaysia arrived in immaculate condition with 100% Sortex purity, full phytosanitary documentation, and zero customs delay.'
+    text: 'We have sourced over 20,000 Copper Bonded Earthing Rods and Chemical Electrodes for our utility-scale solar projects across Gujarat and Rajasthan. The 250+ micron molecular copper bonding passed all CPRI and site conductivity tests with zero bending defects during deep mechanical driving.'
   },
   {
-    name: 'Virendra Shah',
-    role: 'Wholesale Spice Merchant',
-    location: 'Unjha Mandi, Gujarat 🇮🇳',
+    name: 'Vikramaditya Sharma',
+    role: 'VP — Infrastructure Procurement & Metro Electrification',
+    location: 'New Delhi / NCR, India 🇮🇳',
     img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80',
     stars: 5,
-    text: 'Working with Priya Impex for bulk Cumin (Jeera) and Fennel seeds sourcing has been a great experience. Their machine-cleaned quality and honest grading make them a standout supplier in Gujarat.'
+    text: 'Priya Impex has been our primary electrical brass components manufacturer for high-speed rail and metro sub-station works. Their CNC brass neutral links, cable glands, and earth busbars meet exact RDSO, IEC, and BS specifications with full batch test certificates.'
   },
   {
-    name: 'Anand Murthy',
-    role: 'Managing Partner, Spice Processing Unit',
-    location: 'Erode, Tamil Nadu 🇮🇳',
-    img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
-    stars: 5,
-    text: 'We source raw Turmeric fingers and bulbs in bulk through Priya Impex. The curcumin percentage is always verified by lab tests, moisture is strictly under 10%, and moisture-barrier packaging is top-tier.'
-  },
-  {
-    name: 'Maheshwar Reddy',
-    role: 'Commercial Food Manufacturer',
-    location: 'Guntur, Andhra Pradesh 🇮🇳',
-    img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80',
-    stars: 5,
-    text: 'Their Dry Red Chilli Whole and high-ASTA Chilli Powder quality are unmatched in the wholesale trade. On-time container dispatch and transparent business ethics make Priya Impex our long-term choice.'
-  },
-  {
-    name: 'Suresh Agarwal',
-    role: 'Spices Exporter & Bulk Distributor',
+    name: 'Suresh K. Agarwal',
+    role: 'Director, Switchgear & Panel Manufacturing',
     location: 'Mumbai, Maharashtra 🇮🇳',
     img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80',
     stars: 5,
-    text: 'From export documentation to port logistics at Mundra, Priya Impex manages every step flawlessly. Their ground spice powders and coriander seeds have rich natural aroma and zero adulteration.'
+    text: 'With 25+ years of in-house foundry and extrusion mastery in Jamnagar and Rajkot, Priya Impex delivers world-class brass and copper earthing hardware. Their prompt dispatch, precision tolerances within ±0.01mm, and pure alloy composition give us complete confidence.'
+  },
+  {
+    name: 'Anand R. Sundaram',
+    role: 'Head of Electrical MEP & Industrial Projects',
+    location: 'Chennai / Bengaluru, India 🇮🇳',
+    img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
+    stars: 5,
+    text: 'From heavy-duty cast gunmetal rod-to-tape clamps to lightning protection air terminals, Priya Impex provides top-tier quality for our commercial data center and refinery installations. Factory-direct pricing and exceptional technical support make them our most dependable partner.'
+  },
+  {
+    name: 'Pradeep Mukherjee',
+    role: 'General Manager — Power Transmission & Distribution',
+    location: 'Kolkata, West Bengal 🇮🇳',
+    img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80',
+    stars: 5,
+    text: 'The quality of their chemical earthing compound and heavy-gauge earthing pit covers is outstanding. Even in high-corrosion coastal soil environments, their earthing solutions maintain consistently low earth resistance values year after year.'
   }
 ];
 
@@ -67,7 +67,7 @@ export default function TestimonialsSection() {
             <div className="section-title left-align" style={{ marginBottom: '32px' }}>
               <span className="eyebrow">CLIENT TESTIMONIALS</span>
               <h2>
-                Trusted by Partners, <span>Verified by Purity</span>
+                Trusted by Global EPCs, <span>Verified by Precision</span>
               </h2>
             </div>
 
@@ -148,8 +148,8 @@ export default function TestimonialsSection() {
           <div style={{ position: 'relative' }}>
             <div className="testi-image-wrap" style={{ borderRadius: '24px', overflow: 'hidden', height: '100%', minHeight: '380px', boxShadow: '0 12px 36px rgba(11, 34, 64, 0.08)' }}>
               <img
-                src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80"
-                alt="Priya Impex Spices Testimonials"
+                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+                alt="Priya Impex Earthing & Brass Engineering Testimonials"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>

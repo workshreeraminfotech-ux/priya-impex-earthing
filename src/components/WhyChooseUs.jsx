@@ -2,31 +2,34 @@ import React from 'react';
 import { Globe, Truck, Anchor, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+import foundryMachiningImg from '../assets/foundry-machining.jpg';
+import qualityTestingImg from '../assets/quality-testing-lab.jpg';
+
 export default function WhyChooseUs({ onNavigate }) {
   const services = [
     {
-      title: 'Global Sourcing',
-      desc: 'Procuring pure whole spices, seed spices, and ground spices directly from certified Indian farms and verified origins.',
-      img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80',
+      title: 'In-House Foundry & Machining',
+      desc: 'Over 25 years of manufacturing mastery in brass alloy casting, extrusion, copper molecular bonding, and high-speed CNC turning.',
+      img: foundryMachiningImg,
       icon: Globe,
-      tag: 'Farm Sourcing',
-      points: ['Direct Farm Procurement', 'Multi-level Quality Audits']
+      tag: 'Direct Manufacturer',
+      points: ['In-House Foundry & Extrusion', 'High-Precision CNC/VMC Machining']
     },
     {
-      title: 'Supply Chain Management',
-      desc: 'Complete control from farm to port including automated sorting, export-grade packaging, and climate-controlled storage.',
-      img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
+      title: 'International Quality & Testing',
+      desc: 'Manufactured strictly to IEC 62561, IEEE 80, BS 7430, and UL standards with 100% in-house dimensional and conductivity verification.',
+      img: qualityTestingImg,
       icon: Truck,
-      tag: 'End-to-End Control',
-      points: ['Export Grade Packaging', 'Humidity & Climate Control']
+      tag: 'Certified Compliance',
+      points: ['CPRI & NABL Tested Standards', '100% Conductivity & Micron Audits']
     },
     {
-      title: 'Import & Export Compliance',
-      desc: 'Expert handling of international trade regulations, customs documentation, phytosanitary certifications, and ocean shipping.',
+      title: 'Global Export & Container Logistics',
+      desc: 'Expert handling of sea-worthy wooden pallet packaging, custom OEM development, certificate of origin, and ocean container shipping.',
       img: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80',
       icon: Anchor,
-      tag: 'Global Logistics',
-      points: ['Phytosanitary Certificates', 'Worldwide Port Delivery']
+      tag: 'Global Shipping',
+      points: ['Mundra Port Container Dispatch', 'Custom OEM Drawing Development']
     }
   ];
 
@@ -34,12 +37,12 @@ export default function WhyChooseUs({ onNavigate }) {
     <section className="services-redesign-section" id="services">
       <div className="container">
         <div className="section-title">
-          <span className="eyebrow">OUR SERVICES</span>
+          <span className="eyebrow">OUR CAPABILITIES</span>
           <h2>
-            Spice Expertise Driving <span>Global Flavors</span>
+            Manufacturing Excellence Powering <span>Global Infrastructure</span>
           </h2>
           <p>
-            Delivering world-class Indian spice sourcing, Sortex processing, and international export solutions tailored for global buyers.
+            Delivering world-class precision earthing solutions, in-house brass foundry casting, and international container export logistics tailored for global buyers.
           </p>
         </div>
 
@@ -80,5 +83,3 @@ export default function WhyChooseUs({ onNavigate }) {
     </section>
   );
 }
-
-

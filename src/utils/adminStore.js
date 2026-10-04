@@ -1,40 +1,40 @@
-// Centralized Data Store — Priya Impex (Direct, Fast, Clean)
+// Centralized Data Store — Priya Impex (Earthing Solutions & Brass Parts Direct Exporter)
 
 import { PRODUCTS as INITIAL_PRODUCTS, PRODUCT_CATEGORIES } from '../data/products';
 import { BLOGS as INITIAL_BLOGS } from '../data/blogs';
 
-import apedaLogo from '../assets/certificate/apeda.webp';
-import spicesBoardLogo from '../assets/certificate/spices board.webp';
-import fssaiLogo from '../assets/certificate/fssai.webp';
+import cert1Logo from '../assets/certificate/apeda.webp';
+import cert2Logo from '../assets/certificate/spices board.webp';
+import cert3Logo from '../assets/certificate/fssai.webp';
 import certExtraLogo from '../assets/certificate/certificate-extra.webp';
 
 const INITIAL_CERTS = [
   { 
     id: 'cert-1',
-    name: 'APEDA Certified Exporter', 
-    code: 'APEDA / GOVT', 
-    tag: 'Agricultural & Processed Food Products Export Development Authority',
-    logo: apedaLogo
+    name: 'ISO 9001:2015 Certified', 
+    code: 'ISO 9001:2015', 
+    tag: 'Quality Management Systems for Earthing & Precision Brass Manufacturing',
+    logo: cert1Logo
   },
   { 
     id: 'cert-2',
-    name: 'Spice Board of India', 
-    code: 'SPICE BOARD', 
-    tag: 'Ministry of Commerce & Industry, Govt of India',
-    logo: spicesBoardLogo
+    name: 'CE Certified Compliance', 
+    code: 'CE COMPLIANT', 
+    tag: 'European Conformity for Electrical & Grounding Hardware',
+    logo: cert2Logo
   },
   { 
     id: 'cert-3',
-    name: 'FSSAI License Approved', 
-    code: 'FSSAI', 
-    tag: 'Food Safety and Standards Authority of India',
-    logo: fssaiLogo
+    name: 'RoHS & REACH Compliant', 
+    code: 'RoHS / REACH', 
+    tag: 'Hazardous Substance Free Certification for Export Brass Alloys',
+    logo: cert3Logo
   },
   { 
     id: 'cert-4',
-    name: 'Govt Recognized Export Facility', 
-    code: 'EXPORT FACILITY', 
-    tag: 'Certified Quality Control & Safety Compliance',
+    name: 'Govt. Recognized Export House', 
+    code: 'EXPORT HOUSE', 
+    tag: 'Ministry of Commerce & Industry, Government of India',
     logo: certExtraLogo
   }
 ];
@@ -82,13 +82,13 @@ const INITIAL_ENQUIRIES = [
     id: 'enq-101',
     source: 'Product Quote Request',
     name: 'Hans Weber',
-    company: 'EuroSpices GmbH',
-    email: 'h.weber@eurospices.de',
+    company: 'VoltGrid EPC Solutions GmbH',
+    email: 'h.weber@voltgrid.de',
     phone: '+49 171 5550192',
-    product: 'Turmeric Powder (Curcumin > 3.5%)',
-    quantity: '20 MT (1x20ft FCL)',
+    product: 'Copper Bonded Earthing Rods (254 Micron UL / IEC 62561)',
+    quantity: '5,000 Pcs (1x20ft FCL)',
     destinationPort: 'Hamburg Port, Germany',
-    notes: 'Please quote CIF Hamburg rates with phytosanitary & lab COA test certificates.',
+    notes: 'Please quote CIF Hamburg rates with Material Test Certificates (MTC) & IEC test compliance reports.',
     status: 'New',
     date: 'Aug 08, 2026 10:15 AM'
   },
@@ -96,13 +96,13 @@ const INITIAL_ENQUIRIES = [
     id: 'enq-102',
     source: 'Contact Us Form',
     name: 'Tariq Al-Mansoor',
-    company: 'Gulf General Trading Co.',
-    email: 'tariq@gulfgeneral.ae',
+    company: 'Gulf Electromechanical Trading LLC',
+    email: 'tariq@gulfelectro.ae',
     phone: '+971 50 1234567',
-    product: 'Dry Red Chilli & Cumin Seeds',
-    quantity: '40 MT (2x40ft FCL)',
+    product: 'Brass Cable Glands & Neutral Links',
+    quantity: '50,000 Pcs (Assorted Sizes)',
     destinationPort: 'Jebel Ali Port, Dubai',
-    notes: 'Urgent container requirement for Ramadan shipment.',
+    notes: 'Urgent container requirement for ongoing power distribution substation project.',
     status: 'New',
     date: 'Aug 07, 2026 04:30 PM'
   }
@@ -147,7 +147,7 @@ export async function addEnquiry(enquiryData) {
     company: enquiryData.company || 'Private Buyer',
     email: enquiryData.email || 'N/A',
     phone: enquiryData.phone || 'N/A',
-    product: enquiryData.product || enquiryData.title || 'General Spice Enquiry',
+    product: enquiryData.product || enquiryData.title || 'General Earthing & Brass Inquiry',
     quantity: enquiryData.quantity || 'N/A',
     destinationPort: enquiryData.destinationPort || 'Overseas Port',
     notes: enquiryData.notes || enquiryData.message || 'Product quote request submitted.',
@@ -157,10 +157,10 @@ export async function addEnquiry(enquiryData) {
   const updated = [newEnquiry, ...list];
   saveEnquiries(updated);
 
-  // Forward form details directly to sales@priyaimpexs.com
+  // Forward form details directly to priyaimpex.export@gmail.com
   try {
     const emailPayload = {
-      _subject: `New Spice Export Inquiry from ${newEnquiry.name} (${newEnquiry.company}) - Priya Impex`,
+      _subject: `New Earthing & Brass Export Inquiry from ${newEnquiry.name} (${newEnquiry.company}) - Priya Impex`,
       _template: 'table',
       _captcha: 'false',
       'Form Source': newEnquiry.source,
@@ -168,14 +168,14 @@ export async function addEnquiry(enquiryData) {
       'Company Name': newEnquiry.company,
       'Buyer Email': newEnquiry.email,
       'Phone / WhatsApp': newEnquiry.phone,
-      'Product / Spice Category': newEnquiry.product,
+      'Product / Category': newEnquiry.product,
       'Quantity Required': newEnquiry.quantity,
       'Destination Sea Port': newEnquiry.destinationPort,
       'Message / Inquiry Details': newEnquiry.notes,
       'Submission Timestamp': newEnquiry.date
     };
 
-    await fetch('https://formsubmit.co/ajax/sales@priyaimpexs.com', {
+    await fetch('https://formsubmit.co/ajax/priyaimpex.exports@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

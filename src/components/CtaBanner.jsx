@@ -17,23 +17,23 @@ export default function CtaBanner({ onOpenQuote, onNavigate }) {
             {/* Left Image Showcase */}
             <div className="cta-banner-image-wrap">
               <img
-                src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80"
-                alt="Connect with Priya Impex"
+                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+                alt="Connect with Priya Impex Earthing & Brass"
               />
               <div className="cta-image-floating-tag">
                 <Sparkles size={15} color="#F5C542" />
-                <span>Delivering Trust, Exporting Excellence</span>
+                <span>25+ Years Manufacturing Heritage</span>
               </div>
             </div>
 
             {/* Right Content & Actions */}
             <div className="cta-banner-content">
-              <h2 className="cta-banner-title">
-                Connect With Us Today for <span style={{ color: 'var(--gold)' }}>Bulk Container Exports</span>
+              <h2 className="cta-banner-title" style={{ color: '#FFFFFF' }}>
+                Connect With Us Today for <span style={{ color: '#F5C542' }}>Direct Bulk Exports</span>
               </h2>
 
               <p className="cta-banner-desc">
-                Partner with Priya Impex for premium seed spices, whole spices, and ground spices delivered to your port with guaranteed purity, high essential oils, and complete export compliance.
+                Partner with Priya Impex for precision Earthing Solutions, Copper Bonded Rods, and CNC Brass Components delivered to your port with verified conductivity, tight tolerances, and complete export compliance.
               </p>
 
               <div className="cta-actions-row">
@@ -42,7 +42,7 @@ export default function CtaBanner({ onOpenQuote, onNavigate }) {
                   onClick={() => onOpenQuote ? onOpenQuote() : (onNavigate && onNavigate('contact'))} 
                   style={{ padding: '14px 28px', fontSize: '14.5px', display: 'inline-flex', alignItems: 'center', gap: '8px', borderRadius: '10px' }}
                 >
-                  <span>Request Container Quote</span>
+                  <span>Request Export Quote</span>
                   <ArrowRight size={17} />
                 </button>
               </div>

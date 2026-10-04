@@ -9,9 +9,9 @@ export default function Blog({ onNavigate }) {
     <section className="py-80 bg-light" id="blog">
       <div className="container">
         <div className="section-title text-center">
-          <span className="eyebrow">Latest Insights & Market Reports</span>
-          <h2>Indian Spice Export <span style={{ color: 'var(--gold)' }}>Blog</span></h2>
-          <p className="section-desc">Stay updated with crop updates, quality benchmarks, and product sourcing guides from Priya Impex experts.</p>
+          <span className="eyebrow">Technical Insights & Industry Guides</span>
+          <h2>Earthing & Brass Technical <span style={{ color: 'var(--gold)' }}>Blog</span></h2>
+          <p className="section-desc">Stay updated with engineering standards, grounding technology, and precision machining guides from Priya Impex experts.</p>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>

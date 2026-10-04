@@ -22,8 +22,8 @@ const contactCards = [
   },
   {
     icon: MapPin, label: 'Our Location',
-    value: 'Rajkot, Gujarat, India',
-    sub: 'Export Hub — Near Mundra Port',
+    value: 'Rajkot / Jamnagar, Gujarat, India',
+    sub: 'Manufacturing & Export Hub',
     href: '#map',
     color: '#C8940A'
   },
@@ -45,7 +45,7 @@ export default function ContactPage({ initialProduct = '' }) {
     phone: '', 
     product: initialProduct || '', 
     quantity: '', 
-    message: initialProduct ? `Inquiry for export pricing, specifications, and packaging of ${initialProduct}.` : '' 
+    message: initialProduct ? `Inquiry for export pricing, technical specifications, and drawing development of ${initialProduct}.` : '' 
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -54,7 +54,7 @@ export default function ContactPage({ initialProduct = '' }) {
       setForm(prev => ({
         ...prev,
         product: initialProduct,
-        message: prev.message || `Inquiry for export pricing, specifications, and packaging of ${initialProduct}.`
+        message: prev.message || `Inquiry for export pricing, technical specifications, and drawing development of ${initialProduct}.`
       }));
     }
   }, [initialProduct]);
@@ -69,7 +69,7 @@ export default function ContactPage({ initialProduct = '' }) {
       company: form.company,
       email: form.email,
       phone: `${form.countryCode} ${form.phone}`,
-      product: form.product || 'General Export Enquiry',
+      product: form.product || 'General Earthing & Brass Enquiry',
       quantity: form.quantity || 'N/A',
       notes: form.message
     });
@@ -78,7 +78,7 @@ export default function ContactPage({ initialProduct = '' }) {
 
   return (
     <div>
-      {/* Page Hero — Guaranteed Background Image Overlay */}
+      {/* Page Hero */}
       <section style={{
         position: 'relative',
         color: '#FFFFFF',
@@ -112,40 +112,17 @@ export default function ContactPage({ initialProduct = '' }) {
         }} />
 
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <motion.div initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ maxWidth: '820px', margin: '0 auto' }}>
-            <span style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              backgroundColor: 'rgba(255, 255, 255, 0.12)',
-              border: '1.5px solid #F5C542',
-              color: '#F5C542',
-              fontSize: '12px',
-              fontWeight: 800,
-              textTransform: 'uppercase',
-              letterSpacing: '2px',
-              padding: '6px 20px',
-              borderRadius: '100px',
-              marginBottom: '20px',
-              backdropFilter: 'blur(6px)'
-            }}>
-              Available 6 Days a Week • Direct B2B Desk
-            </span>
-
+          <motion.div initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ maxWidth: '820px', margin: '0 auto', textAlign: 'center' }}>
             <h1 style={{
               fontFamily: 'var(--font-h, Outfit, sans-serif)',
               fontSize: 'clamp(34px, 5vw, 54px)',
               fontWeight: 900,
-              marginBottom: '20px',
+              margin: 0,
               lineHeight: 1.15,
               color: '#FFFFFF'
             }}>
               Contact <span style={{ color: '#F5C542' }}>Priya Impex</span>
             </h1>
-
-            <p style={{ fontSize: '17px', color: 'rgba(255, 255, 255, 0.9)', lineHeight: 1.6, maxWidth: '700px', margin: '0 auto', fontWeight: 500 }}>
-              Get in touch for product queries, bulk orders, export quotes or sample requests. Our team responds within 24 hours.
-            </p>
           </motion.div>
         </div>
       </section>
@@ -204,15 +181,15 @@ export default function ContactPage({ initialProduct = '' }) {
               transition={{ duration: 0.7 }}
             >
               <h3 style={{ fontFamily: 'var(--font-h)', fontSize: 24, fontWeight: 800, marginBottom: 6 }}>
-                Send an Enquiry
+                Send an Enquiry / Request RFQ
               </h3>
               <p style={{ fontSize: 14, color: 'var(--gray)', marginBottom: 28 }}>
-                Fill in the details below and we'll get in touch with pricing and availability.
+                Fill in your project requirements below and our technical export team will provide detailed pricing, drawings, and delivery timelines.
               </p>
 
               {submitted && (
                 <div style={{ background: '#D1FAE5', border: '1px solid #6EE7B7', borderRadius: 12, padding: '14px 18px', marginBottom: 20, color: '#065F46', fontWeight: 700 }}>
-                  ✓ Thank you! Your enquiry has been received by our Export Desk. We will respond within 24 hours.
+                  ✓ Thank you! Your enquiry has been received by our Export Technical Desk. We will respond within 24 hours.
                 </div>
               )}
 
@@ -223,14 +200,14 @@ export default function ContactPage({ initialProduct = '' }) {
                     <input name="name" placeholder="Your full name" value={form.name} onChange={handleChange} required />
                   </div>
                   <div className="form-group">
-                    <label>Company Name</label>
-                    <input name="company" placeholder="Company / Organization" value={form.company} onChange={handleChange} />
+                    <label>Company / Organization</label>
+                    <input name="company" placeholder="Company / EPC Contractor name" value={form.company} onChange={handleChange} />
                   </div>
                 </div>
                 <div className="form-row">
                   <div className="form-group">
                     <label>Email Address *</label>
-                    <input type="email" name="email" placeholder="importer@company.com" value={form.email} onChange={handleChange} required />
+                    <input type="email" name="email" placeholder="buyer@company.com" value={form.email} onChange={handleChange} required />
                   </div>
                   <div className="form-group">
                     <label>Phone / WhatsApp *</label>
@@ -245,18 +222,18 @@ export default function ContactPage({ initialProduct = '' }) {
                 <div className="form-row">
                   <div className="form-group">
                     <label>Product Interest</label>
-                    <input name="product" placeholder="e.g. Turmeric Powder, Cumin Seeds" value={form.product} onChange={handleChange} />
+                    <input name="product" placeholder="e.g. Copper Bonded Rods, Brass Cable Glands" value={form.product} onChange={handleChange} />
                   </div>
                   <div className="form-group">
                     <label>Target Quantity / Volume</label>
-                    <input name="quantity" placeholder="e.g. 20 MT Container" value={form.quantity} onChange={handleChange} />
+                    <input name="quantity" placeholder="e.g. 5,000 Pcs / 1x20ft Container" value={form.quantity} onChange={handleChange} />
                   </div>
                 </div>
                 <div className="form-group">
-                  <label>Message / Enquiry *</label>
+                  <label>Message / Technical Requirements *</label>
                   <textarea
                     name="message"
-                    placeholder="Describe your requirements — product specifications, destination country, packaging preferences, delivery timeline..."
+                    placeholder="Describe your technical specifications — copper microns, rod diameter/length, thread standard (Metric/NPT), destination port, packaging..."
                     value={form.message}
                     onChange={handleChange}
                     required
@@ -266,7 +243,7 @@ export default function ContactPage({ initialProduct = '' }) {
                 <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                   <button type="submit" className="btn btn-primary" style={{ flex: 1, justifyContent: 'center' }}>
                     <Send size={17} />
-                    <span>Submit Enquiry</span>
+                    <span>Submit Export Enquiry</span>
                     <ArrowRight size={15} />
                   </button>
                 </div>
@@ -274,10 +251,11 @@ export default function ContactPage({ initialProduct = '' }) {
             </motion.div>
 
             {/* Right Side */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
               {/* Map */}
               <motion.div
                 className="map-card"
+                id="map"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -285,10 +263,11 @@ export default function ContactPage({ initialProduct = '' }) {
                 style={{ minHeight: 300 }}
               >
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119067.87434720948!2d70.7284077!3d22.2736308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c98ac71cdf0f%3A0x76dd15cfbe93ad3b!2sRajkot%2C+Gujarat!5e0!3m2!1sen!2sin!4v1600000000000"
-                  title="Priya Impex Location - Rajkot Gujarat"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14773.541650390625!2d70.749955!3d22.2169633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cb3d78dee229%3A0xadcc6d50aecbd1b2!2sPRIYA%20IMPEX!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                  title="PRIYA IMPEX - Official Factory & Export Office Location"
                   allowFullScreen
                   loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
                 />
               </motion.div>
 
@@ -301,13 +280,13 @@ export default function ContactPage({ initialProduct = '' }) {
                 style={{ background: '#E8F5E9', border: '1.5px solid #A5D6A7', borderRadius: 16, padding: '24px 28px' }}
               >
                 <h4 style={{ fontFamily: 'var(--font-h)', fontSize: 17, fontWeight: 800, marginBottom: 6 }}>
-                  💬 Prefer to Chat?
+                  💬 Prefer to Chat Directly?
                 </h4>
                 <p style={{ fontSize: 14, color: 'var(--gray)', marginBottom: 16 }}>
-                  Chat directly with our export team on WhatsApp for the fastest response!
+                  Chat directly with our export engineering desk on WhatsApp for immediate assistance!
                 </p>
                 <a
-                  href="https://api.whatsapp.com/send?phone=919328602931&text=Hi%20Priya%20Impex!%20I%20would%20like%20to%20enquire%20about%20your%20products."
+                  href="https://api.whatsapp.com/send?phone=919328602931&text=Hi%20Priya%20Impex!%20I%20would%20like%20to%20enquire%20about%20your%20Earthing%20Parts%20and%20Brass%20Components."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary"

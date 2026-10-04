@@ -23,9 +23,9 @@ export default function Products() {
     <section className="py-80 bg-light" id="products">
       <div className="container">
         <div className="section-title text-center">
-          <span className="eyebrow">Our Spice Collection</span>
-          <h2>Explore Priya Impex <span>Indian Spices Catalog</span></h2>
-          <p className="section-desc">Search and filter through our export-grade wholesale ground spices, whole spices, seed spices, and custom blends.</p>
+          <span className="eyebrow">Our Precision Collection</span>
+          <h2>Explore Priya Impex <span>Earthing & Brass Catalog</span></h2>
+          <p className="section-desc">Search and filter through our export-grade Copper Bonded Rods, Chemical Electrodes, Cable Glands, Neutral Links, and Grounding Accessories.</p>
         </div>
 
         {/* Controls */}
@@ -34,7 +34,7 @@ export default function Products() {
             <Search size={18} />
             <input 
               type="text" 
-              placeholder="Search spices (e.g. Turmeric, Cumin, Chilli, Cardamom...)"
+              placeholder="Search products (e.g. Copper Bonded Rods, Cable Glands, Neutral Links...)"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />

@@ -1,57 +1,59 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Eye, ShieldCheck, CheckCircle2, Globe2, Sparkles, Building2, Factory, TestTube, Package, Ship } from 'lucide-react';
+import { Target, Eye, ShieldCheck, CheckCircle2, Globe2, Sparkles, Building2, Factory, TestTube, Package, Ship, Cpu } from 'lucide-react';
 import AboutUs from '../components/AboutUs';
 import CertificationsSection from '../components/CertificationsSection';
 import CtaBanner from '../components/CtaBanner';
 
 import hygienicPackagingImg from '../assets/hygienic-packaging.webp';
 import containerDispatchImg from '../assets/container-dispatch.webp';
+import plantRajkotImg from '../assets/plant-rajkot-earthing.jpg';
+import plantJamnagarImg from '../assets/plant-jamnagar-brass.jpg';
 
 export default function AboutPage({ onNavigate, onOpenQuote }) {
   const values = [
     {
       icon: Target,
       title: 'Our Mission',
-      desc: 'To deliver 100% pure, unadulterated Indian spices and seed spices directly from farm origin to global sea ports with complete quality transparency, zero adulteration, and guaranteed on-time ocean delivery.',
-      img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80'
+      desc: 'To manufacture 100% compliant, precision-engineered Earthing Parts, Copper Bonded Rods, and Precision Brass Components across our 2 Gujarat manufacturing units (1 in Rajkot, 1 in Jamnagar), exporting them globally through Priya Impex with direct factory transparency and guaranteed on-time delivery.',
+      img: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80'
     },
     {
       icon: Eye,
       title: 'Our Vision',
-      desc: 'To stand as the most respected Indian spices export brand globally, recognized across 50+ countries for uncompromising quality standards, modern processing infrastructure, and long-term client trust.',
+      desc: 'To stand as the most trusted manufacturing and direct export group for grounding hardware and precision CNC brass components globally for international B2B buyers, known for genuine factory pricing and zero-compromise engineering.',
       img: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=800&q=80'
     },
     {
       icon: ShieldCheck,
       title: 'Quality Assurance Policy',
-      desc: 'Every single export container batch undergoes rigorous multi-tier laboratory testing (curcumin %, piperine %, moisture levels, pesticide MRLs), Sortex machine cleaning, and APEDA/Phytosanitary inspection.',
+      desc: 'Every single export consignment produced at our factories undergoes multi-tier testing: copper coating thickness in microns (UL/IEC standards), electrical conductivity %, tensile strength, and Go/No-Go thread gauge verification.',
       img: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80'
     }
   ];
 
   const infrastructureSteps = [
     {
-      title: 'Sortex Cleaning & Milling',
-      desc: 'State-of-the-art optical sorters remove discolored seeds and foreign matter.',
+      title: 'In-House Foundry & Extrusion',
+      desc: 'High-capacity induction melting and extrusion producing high-tensile brass alloys and copper rods.',
       icon: Factory,
-      img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80'
+      img: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
     },
     {
-      title: 'Accredited Lab Testing',
-      desc: 'In-house & third-party NABL lab testing for ASTA color, moisture & purity.',
+      title: 'Accredited Lab & Conductivity Testing',
+      desc: 'In-house & third-party NABL/CPRI testing for copper coating thickness and conductivity.',
       icon: TestTube,
       img: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80'
     },
     {
-      title: 'Hygienic Bulk Packaging',
-      desc: 'Food-grade moisture barrier packaging preserving natural freshness.',
-      icon: Package,
+      title: 'Precision CNC Machining',
+      desc: 'High-speed CNC and VMC turning centers maintaining tight dimensional tolerances (±0.01mm).',
+      icon: Cpu,
       img: hygienicPackagingImg
     },
     {
-      title: 'Port Container Dispatch',
-      desc: 'Seamless ocean freight stuffing and port customs clearance at Mundra.',
+      title: 'Seaworthy Pallet Container Dispatch',
+      desc: 'Heavy-duty wooden crates, palletizing, and customs clearance at Mundra & Pipavav ports.',
       icon: Ship,
       img: containerDispatchImg
     }
@@ -60,7 +62,7 @@ export default function AboutPage({ onNavigate, onOpenQuote }) {
   return (
     <div className="about-page" style={{ backgroundColor: '#F8FAFC' }}>
       
-      {/* Page Hero — Guaranteed Background Image Overlay */}
+      {/* Page Hero */}
       <section style={{
         position: 'relative',
         color: '#FFFFFF',
@@ -70,7 +72,7 @@ export default function AboutPage({ onNavigate, onOpenQuote }) {
       }}>
         {/* Background Image */}
         <img 
-          src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=70" 
+          src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=70" 
           alt="About Priya Impex Background" 
           loading="lazy"
           decoding="async"
@@ -94,66 +96,41 @@ export default function AboutPage({ onNavigate, onOpenQuote }) {
 
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <motion.div initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ maxWidth: '840px', margin: '0 auto', textAlign: 'center' }}>
-            <span style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              backgroundColor: 'rgba(255, 255, 255, 0.12)',
-              border: '1px solid rgba(255, 255, 255, 0.25)',
-              color: '#FFFFFF',
-              fontSize: '12px',
-              fontWeight: 800,
-              textTransform: 'uppercase',
-              letterSpacing: '2px',
-              padding: '6px 20px',
-              borderRadius: '100px',
-              marginBottom: '20px',
-              backdropFilter: 'blur(6px)'
-            }}>
-              <Sparkles size={14} style={{ color: 'var(--gold-light)' }} />
-              PRIYA IMPEX • B2B SPICES EXPORTS
-            </span>
-
             <h1 style={{
               fontFamily: 'var(--font-h, Outfit, sans-serif)',
               fontSize: 'clamp(34px, 5vw, 54px)',
               fontWeight: 900,
-              marginBottom: '20px',
+              margin: '0',
               lineHeight: 1.15,
               color: '#FFFFFF'
             }}>
-              Pioneering Excellence in <br />
-              <span style={{ color: 'var(--gold-light)' }}>Global Spices Exports</span>
+              About <span style={{ color: 'var(--gold-light)' }}>Us</span>
             </h1>
-
-            <p style={{ fontSize: '17px', color: 'rgba(255, 255, 255, 0.9)', lineHeight: 1.65, maxWidth: '720px', margin: '0 auto', fontWeight: 500 }}>
-              Connecting Indian spice farmers to global international markets with modern processing, Sortex sorting, and sea container freight logistics.
-            </p>
           </motion.div>
         </div>
       </section>
 
       {/* Main AboutUs Showcase */}
-      <AboutUs />
+      <AboutUs onNavigate={onNavigate} />
 
-      {/* Corporate Presence & Global Trade Desks */}
+      {/* 2 Manufacturing Units & Global Trade Desks */}
       <section className="py-50" style={{ backgroundColor: '#FFFDF7', padding: '56px 0', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
         <div className="container">
           <div className="section-title text-center" style={{ marginBottom: '44px' }}>
             <span className="eyebrow">
-              GLOBAL FOOTPRINT
+              OUR INFRASTRUCTURE & EXPORT SETUP
             </span>
             <h2 style={{ color: 'var(--navy)', marginTop: '10px' }}>
-              Main Headquarters & <span style={{ color: 'var(--gold)' }}>Global Representatives</span>
+              2 Manufacturing Facilities & <span style={{ color: 'var(--gold)' }}>Priya Impex Export Desk</span>
             </h2>
-            <p style={{ color: 'var(--gray)', maxWidth: '680px', margin: '10px auto 0', fontSize: '15.5px', lineHeight: 1.6 }}>
-              Centralized export operations based in Rajkot, Gujarat (India), backed by dedicated international trade executives in Germany, USA, and UK for direct buyer support.
+            <p style={{ color: 'var(--gray)', maxWidth: '720px', margin: '10px auto 0', fontSize: '15.5px', lineHeight: 1.6 }}>
+              Our manufacturing core spans 2 specialized production plants in Gujarat (1 in Rajkot & 1 in Jamnagar), complemented by Priya Impex for global marketing, container logistics, and international buyer support.
             </p>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))', gap: '24px' }}>
             
-            {/* Card 1: Main Headquarters (Rajkot, India) */}
+            {/* Card 1: Manufacturing Unit 1 (Rajkot) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -170,28 +147,28 @@ export default function AboutPage({ onNavigate, onOpenQuote }) {
             >
               <div style={{ height: '180px', overflow: 'hidden', position: 'relative' }}>
                 <img 
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" 
-                  alt="Main Office & Facility Rajkot India" 
+                  src={plantRajkotImg} 
+                  alt="Unit 1 Rajkot Earthing Plant" 
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
                 />
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 30%, rgba(11, 34, 64, 0.88) 100%)' }}></div>
                 <div style={{ position: 'absolute', bottom: '14px', left: '18px', display: 'flex', alignItems: 'center', gap: '8px', color: '#FFFFFF' }}>
                   <Building2 size={20} style={{ color: 'var(--gold)' }} />
-                  <span style={{ fontWeight: 800, fontSize: '16.5px' }}>Main Head Office 🇮🇳</span>
+                  <span style={{ fontWeight: 800, fontSize: '16.5px' }}>Unit 1 — Rajkot Plant 🇮🇳</span>
                 </div>
               </div>
 
               <div style={{ padding: '22px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                 <span style={{ fontSize: '12px', color: 'var(--gold-deep)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '8px' }}>
-                  RAJKOT, GUJARAT, INDIA
+                  EARTHING & GROUNDING SOLUTIONS
                 </span>
                 <p style={{ fontSize: '14px', color: 'var(--gray)', lineHeight: 1.6, margin: 0, fontWeight: 500 }}>
-                  Central procurement, Sortex processing, lab analysis, export packaging, and container stuffing hub with rapid dispatch to Mundra & Pipavav ports.
+                  Specialized in Copper Bonded Earthing Rods (up to 254 micron), Chemical Electrodes, Earth Enhancing Compound, and Heavy-Duty Pit Covers with in-house conductivity lab.
                 </p>
               </div>
             </motion.div>
 
-            {/* Card 2: Germany Executive */}
+            {/* Card 2: Manufacturing Unit 2 (Jamnagar) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -209,28 +186,28 @@ export default function AboutPage({ onNavigate, onOpenQuote }) {
             >
               <div style={{ height: '180px', overflow: 'hidden', position: 'relative' }}>
                 <img 
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
-                  alt="Germany Trade Executive" 
+                  src={plantJamnagarImg} 
+                  alt="Unit 2 Jamnagar Brass Plant" 
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
                 />
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 30%, rgba(11, 34, 64, 0.88) 100%)' }}></div>
                 <div style={{ position: 'absolute', bottom: '14px', left: '18px', display: 'flex', alignItems: 'center', gap: '8px', color: '#FFFFFF' }}>
-                  <Globe2 size={20} style={{ color: 'var(--gold)' }} />
-                  <span style={{ fontWeight: 800, fontSize: '16.5px' }}>Germany Executive 🇩🇪</span>
+                  <Factory size={20} style={{ color: 'var(--gold)' }} />
+                  <span style={{ fontWeight: 800, fontSize: '16.5px' }}>Unit 2 — Jamnagar Plant 🇮🇳</span>
                 </div>
               </div>
 
               <div style={{ padding: '22px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                 <span style={{ fontSize: '12px', color: 'var(--gold-deep)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '8px' }}>
-                  GERMANY & EUROPE DESK
+                  BRASS FOUNDRY & CNC PRECISION HUB
                 </span>
                 <p style={{ fontSize: '14px', color: 'var(--gray)', lineHeight: 1.6, margin: 0, fontWeight: 500 }}>
-                  Dedicated trade representative coordinating European buyer relations, EU food safety compliance (EU MRLs), sample dispatches, and import documentation.
+                  1 high-capacity production unit in Jamnagar featuring in-house brass alloy casting, extrusion, and CNC/VMC machining of Cable Glands, Neutral Links, and Split Bolts.
                 </p>
               </div>
             </motion.div>
 
-            {/* Card 3: USA Executive */}
+            {/* Card 3: Priya Impex Direct Export Firm */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -248,28 +225,28 @@ export default function AboutPage({ onNavigate, onOpenQuote }) {
             >
               <div style={{ height: '180px', overflow: 'hidden', position: 'relative' }}>
                 <img 
-                  src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=800&q=80" 
-                  alt="USA Trade Executive" 
+                  src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80" 
+                  alt="Priya Impex Direct Export Firm" 
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
                 />
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 30%, rgba(11, 34, 64, 0.88) 100%)' }}></div>
                 <div style={{ position: 'absolute', bottom: '14px', left: '18px', display: 'flex', alignItems: 'center', gap: '8px', color: '#FFFFFF' }}>
-                  <Globe2 size={20} style={{ color: 'var(--gold)' }} />
-                  <span style={{ fontWeight: 800, fontSize: '16.5px' }}>USA Executive 🇺🇸</span>
+                  <Ship size={20} style={{ color: 'var(--gold)' }} />
+                  <span style={{ fontWeight: 800, fontSize: '16.5px' }}>Priya Impex — Export Desk 🚢</span>
                 </div>
               </div>
 
               <div style={{ padding: '22px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                 <span style={{ fontSize: '12px', color: 'var(--gold-deep)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '8px' }}>
-                  USA & NORTH AMERICA DESK
+                  COMMERCIAL & EXPORT MANAGEMENT
                 </span>
                 <p style={{ fontSize: '14px', color: 'var(--gray)', lineHeight: 1.6, margin: 0, fontWeight: 500 }}>
-                  Dedicated regional representative managing commercial inquiries, FDA & USDA compliance, container shipments, and direct relationship support for American buyers.
+                  Our dedicated export firm executing direct global sales, customs clearance, international contract management, and seaworthy container shipping from Mundra port.
                 </p>
               </div>
             </motion.div>
 
-            {/* Card 4: UK Executive */}
+            {/* Card 4: Global Representative Desks */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -287,23 +264,23 @@ export default function AboutPage({ onNavigate, onOpenQuote }) {
             >
               <div style={{ height: '180px', overflow: 'hidden', position: 'relative' }}>
                 <img 
-                  src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" 
-                  alt="UK Trade Executive" 
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
+                  alt="Global Trade Desks" 
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
                 />
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 30%, rgba(11, 34, 64, 0.88) 100%)' }}></div>
                 <div style={{ position: 'absolute', bottom: '14px', left: '18px', display: 'flex', alignItems: 'center', gap: '8px', color: '#FFFFFF' }}>
                   <Globe2 size={20} style={{ color: 'var(--gold)' }} />
-                  <span style={{ fontWeight: 800, fontSize: '16.5px' }}>UK Executive 🇬🇧</span>
+                  <span style={{ fontWeight: 800, fontSize: '16.5px' }}>Global Buyer Desks 🌐</span>
                 </div>
               </div>
 
               <div style={{ padding: '22px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                 <span style={{ fontSize: '12px', color: 'var(--gold-deep)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '8px' }}>
-                  UNITED KINGDOM (UK) DESK
+                  GERMANY • USA • UK BUYER SUPPORT
                 </span>
                 <p style={{ fontSize: '14px', color: 'var(--gray)', lineHeight: 1.6, margin: 0, fontWeight: 500 }}>
-                  Dedicated client relationship executive catering to British spice distributors, ethnic food markets, and food manufacturers with localized buyer assistance.
+                  Dedicated overseas trade representatives coordinating international buyer relations, drawing approvals, sample evaluations, and localized technical assistance.
                 </p>
               </div>
             </motion.div>
@@ -317,13 +294,13 @@ export default function AboutPage({ onNavigate, onOpenQuote }) {
         <div className="container">
           <div className="section-title text-center" style={{ marginBottom: '44px' }}>
             <span className="eyebrow">
-              EXPORT INFRASTRUCTURE
+              MANUFACTURING INFRASTRUCTURE
             </span>
             <h2 style={{ color: 'var(--navy)', marginTop: '10px' }}>
-              State-Of-The-Art <span style={{ color: 'var(--gold)' }}>Processing & Handling</span>
+              State-Of-The-Art <span style={{ color: 'var(--gold)' }}>Foundry & Machining Facility</span>
             </h2>
             <p style={{ color: 'var(--gray)', maxWidth: '620px', margin: '10px auto 0' }}>
-              From farm-origin procurement to laboratory testing and container port dispatch.
+              From raw alloy smelting to molecular copper bonding, CNC turning, and container port dispatch across our 2 units.
             </p>
           </div>
 
@@ -364,7 +341,7 @@ export default function AboutPage({ onNavigate, onOpenQuote }) {
         </div>
       </section>
 
-      {/* Mission, Vision & Quality Policy Section with Header Photos */}
+      {/* Mission, Vision & Quality Policy Section */}
       <section className="py-50" style={{ backgroundColor: '#FFFDF7', padding: '54px 0' }}>
         <div className="container">
           <div className="section-title text-center" style={{ marginBottom: '48px' }}>
@@ -372,10 +349,10 @@ export default function AboutPage({ onNavigate, onOpenQuote }) {
               OUR CORE FOUNDATION
             </span>
             <h2 style={{ color: 'var(--navy)', marginTop: '10px' }}>
-              Driven by Purpose, <span style={{ color: 'var(--gold)' }}>Guided by Integrity</span>
+              Driven by Precision, <span style={{ color: 'var(--gold)' }}>Guided by Integrity</span>
             </h2>
             <p style={{ color: 'var(--gray)', maxWidth: '600px', margin: '10px auto 0' }}>
-              Discover the core principles that power Priya Impex's global reputation as a premier Indian spices exporter.
+              Discover the core principles that power our manufacturing heritage and Priya Impex's direct export commitment.
             </p>
           </div>
 

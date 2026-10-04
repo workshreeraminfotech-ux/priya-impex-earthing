@@ -10,11 +10,11 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = '' }) {
     company: '',
     email: '',
     phone: '',
-    product: initialProduct || 'Whole Spices',
-    quantity: '20 MT (1x20ft Container)',
+    product: initialProduct || 'Copper Bonded Earthing Rods',
+    quantity: '5,000 Pcs (1x20ft Container)',
     incoterm: 'FOB (Free On Board)',
     destinationPort: '',
-    packaging: 'Multi-wall PP Woven Bags (25/50 Kg)',
+    packaging: 'Wooden Pallet Crate / Heavy Duty Bundles',
     notes: ''
   });
 
@@ -49,12 +49,12 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = '' }) {
           <div className="rfq-modal-header">
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
               <span className="cyan-badge" style={{ background: 'rgba(255, 255, 255, 0.12)', color: '#CBD5E1', border: '1px solid rgba(140,150,160,0.3)' }}>
-                <Ship size={14} /> International B2B Export Desk
+                <Ship size={14} /> International Engineering & Export Desk
               </span>
             </div>
-            <h3>Request Product Export Quote</h3>
+            <h3>Request Earthing & Brass Export Quote</h3>
             <p style={{ fontSize: '13px', opacity: 0.85, margin: 0 }}>
-              Get instant FOB/CIF export pricing, phytosanitary specs, and shipping timelines.
+              Get instant FOB/CIF export pricing, technical drawing review, and container dispatch timelines.
             </p>
             <button className="rfq-modal-close" onClick={onClose} aria-label="Close modal">
               <X size={20} />
@@ -75,7 +75,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = '' }) {
                 Quote Request Received!
               </h4>
               <p style={{ fontSize: '14px', color: 'var(--gray)', maxWidth: '440px', margin: '0 auto 24px' }}>
-                Thank you! Your quote enquiry has been sent to our Export Desk. Our team will verify port rates and email your detailed proforma quotation within 4 business hours.
+                Thank you! Your quote enquiry has been sent to our Export Technical Desk. Our engineering team will verify port rates and email your detailed proforma quotation within 4 business hours.
               </p>
               <button 
                 className="btn btn-silver"
@@ -104,7 +104,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = '' }) {
                   <input 
                     type="text" 
                     required 
-                    placeholder="e.g. Global Foods Trading Ltd"
+                    placeholder="e.g. VoltGrid EPC Solutions Ltd"
                     className="rfq-input"
                     value={formData.company}
                     onChange={(e) => setFormData({...formData, company: e.target.value})}
@@ -139,11 +139,11 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = '' }) {
 
               <div className="rfq-field-group">
                 <div>
-                  <label className="rfq-label">Required Spice Product *</label>
+                  <label className="rfq-label">Required Product / Category *</label>
                   <input 
                     type="text" 
                     required
-                    placeholder="e.g. Turmeric Powder / Cumin Seeds"
+                    placeholder="e.g. Copper Bonded Rods / Brass Cable Glands"
                     className="rfq-input"
                     value={formData.product}
                     onChange={(e) => setFormData({...formData, product: e.target.value})}
@@ -154,7 +154,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = '' }) {
                   <input 
                     type="text" 
                     required
-                    placeholder="e.g. 20 MT (1x20ft Container)"
+                    placeholder="e.g. 5,000 Pcs (1x20ft Container)"
                     className="rfq-input"
                     value={formData.quantity}
                     onChange={(e) => setFormData({...formData, quantity: e.target.value})}
@@ -167,7 +167,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = '' }) {
                 <input 
                   type="text" 
                   required 
-                  placeholder="e.g. Jebel Ali (Dubai) / Hamburg / New York"
+                  placeholder="e.g. Jebel Ali (Dubai) / Hamburg / Singapore"
                   className="rfq-input"
                   value={formData.destinationPort}
                   onChange={(e) => setFormData({...formData, destinationPort: e.target.value})}
@@ -175,10 +175,10 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = '' }) {
               </div>
 
               <div>
-                <label className="rfq-label">Additional Message / Requirements</label>
+                <label className="rfq-label">Additional Message / Technical Specifications</label>
                 <textarea 
                   rows={2} 
-                  placeholder="e.g. Moisture < 8%, ASTA color rating, Phytosanitary certification required..."
+                  placeholder="e.g. Copper coating 254 micron, rod diameter 17.2mm, thread standard (Metric/NPT), MTC certificate required..."
                   className="rfq-textarea"
                   value={formData.notes}
                   onChange={(e) => setFormData({...formData, notes: e.target.value})}

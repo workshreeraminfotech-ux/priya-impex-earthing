@@ -792,24 +792,20 @@ button, input, select, textarea { font: inherit; }
   justify-content: center;
   padding: 20px;
 }
-.modal-card {
-  background: var(--white);
-  border-radius: 24px;
-  width: 100%;
-  max-width: 680px;
-  overflow: hidden;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+/* -- Product Popup Modal -- */
+.product-popup-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(240px, 320px) 1fr;
+  align-items: center;
+  gap: 44px;
 }
-.modal-img { height: 360px; overflow: hidden; }
-.modal-img img { width: 100%; height: 100%; object-fit: cover; }
-.modal-body { padding: 32px; overflow-y: auto; max-height: 360px; }
-.modal-close { position: absolute; top: 16px; right: 16px; background: var(--black); color: #fff; width: 32px; height: 32px; border-radius: 50%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-.modal-specs { display: flex; flex-direction: column; gap: 10px; margin: 14px 0; }
-.spec-row { display: flex; justify-content: space-between; font-size: 13px; padding: 8px 12px; background: var(--gray-light); border-radius: 8px; }
-.spec-row strong { font-weight: 700; color: var(--black); }
-.spec-row span { color: var(--gray); }
+@media (max-width: 680px) {
+  .product-popup-card {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 36px 24px !important;
+  }
+}
 
 /* ======================================================================
    PAGES
@@ -937,8 +933,6 @@ button, input, select, textarea { font: inherit; }
   .hero-slide { height: 420px; }
   .hero-content { padding: 0 24px; }
   .footer-links-grid { grid-template-columns: 1fr; }
-  .modal-card { grid-template-columns: 1fr; }
-  .modal-img { height: 200px; }
   .form-row { grid-template-columns: 1fr; }
   .why-stats { grid-template-columns: repeat(3, 1fr); }
   .export-steps { grid-template-columns: 1fr; }
@@ -1976,7 +1970,9 @@ button, input, select, textarea { font: inherit; }
    ====================================================================== */
 .testimonial-redesign-section {
   padding: 54px 0;
-  background: #ffffff;
+  background: var(--cream);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   position: relative;
 }
 
@@ -2413,7 +2409,8 @@ button, input, select, textarea { font: inherit; }
     font-size: 30px;
   }
   .counter-stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
   .footer-top-grid {
     grid-template-columns: 1fr;
@@ -2429,7 +2426,7 @@ button, input, select, textarea { font: inherit; }
    ====================================================================== */
 .faq-redesign-section {
   padding: 54px 0;
-  background: var(--cream);
+  background: #FFFFFF;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   position: relative;
@@ -2996,7 +2993,7 @@ img, video, iframe, canvas, svg {
   }
 
   /* BIG PROMINENT HEADINGS FOR ALL SECTIONS ON MOBILE */
-  h2, .section-title h2, .work-process-header h2, .about-section h2, .testimonials-section h2, .certifications-section h2 {
+  h2, .section-title h2, .work-process-header h2, .about-section h2, .testimonials-section h2, .certifications-section h2, .why-pi-title, .why-priya-impex-section h2 {
     font-size: 28px !important;
     line-height: 1.25 !important;
     font-weight: 900 !important;
@@ -3034,8 +3031,53 @@ img, video, iframe, canvas, svg {
   }
 
   .counter-stats-grid {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .counter-card-v2 {
+    padding: 16px 12px !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justifyContent: flex-start !important;
+  }
+
+  .counter-card-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .counter-icon-wrap {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 10px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .counter-icon-wrap svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .counter-num-val {
+    font-size: 23px !important;
+    line-height: 1.1 !important;
+  }
+
+  .counter-card-v2 h3 {
+    font-size: 12.5px !important;
+    line-height: 1.3 !important;
+    font-weight: 800 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .counter-card-v2 p {
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    color: var(--gray) !important;
   }
 
   /* Main Seeds Showcase Mobile Fix */
@@ -3082,13 +3124,23 @@ img, video, iframe, canvas, svg {
   .cta-banner-content {
     text-align: left !important;
   }
-  .cta-banner-title {
+  .cta-banner-title,
+  .cta-banner-content h2,
+  .cta-banner-card h2 {
+    color: #FFFFFF !important;
     font-size: 24px !important;
     line-height: 1.25 !important;
     text-align: left !important;
     margin-bottom: 12px !important;
+    font-weight: 900 !important;
+  }
+  .cta-banner-title span,
+  .cta-banner-content h2 span,
+  .cta-banner-card h2 span {
+    color: var(--gold-light) !important;
   }
   .cta-banner-desc {
+    color: rgba(255, 255, 255, 0.92) !important;
     font-size: 14px !important;
     text-align: left !important;
     margin-bottom: 16px !important;
@@ -3445,8 +3497,8 @@ img, video, iframe, canvas, svg {
   flex-wrap: nowrap !important;
   gap: 24px !important;
   width: max-content !important;
-  animation: seedsMarqueeScroll 28s linear infinite !important;
-  -webkit-animation: seedsMarqueeScroll 28s linear infinite !important;
+  animation: seedsMarqueeScroll 18s linear infinite !important;
+  -webkit-animation: seedsMarqueeScroll 18s linear infinite !important;
   will-change: transform;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
@@ -3502,8 +3554,8 @@ img, video, iframe, canvas, svg {
   }
   .seeds-marquee-track {
     gap: 18px !important;
-    animation-duration: 22s !important;
-    -webkit-animation-duration: 22s !important;
+    animation-duration: 14s !important;
+    -webkit-animation-duration: 14s !important;
   }
   .seeds-marquee-card {
     width: 270px !important;
@@ -3513,8 +3565,8 @@ img, video, iframe, canvas, svg {
 @media (max-width: 480px) {
   .seeds-marquee-track {
     gap: 14px !important;
-    animation-duration: 18s !important;
-    -webkit-animation-duration: 18s !important;
+    animation-duration: 11s !important;
+    -webkit-animation-duration: 11s !important;
   }
   .seeds-marquee-card {
     width: 250px !important;
@@ -3633,7 +3685,7 @@ img, video, iframe, canvas, svg {
    ====================================================================== */
 .wave-roadmap-section {
   padding: 64px 0;
-  background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F2 50%, #FFFFFF 100%);
+  background: #FFFFFF;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   position: relative;
@@ -3962,11 +4014,304 @@ img, video, iframe, canvas, svg {
   }
 }
 
+/* ======================================================================
+   PRODUCT POPUP MODAL — SIDE-BY-SIDE RESPONSIVE LAYOUT
+   ====================================================================== */
+.product-modal-dialog {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: stretch;
+  min-height: 380px;
+}
 
+.product-modal-img-col {
+  flex: 0 0 45%;
+  max-width: 45%;
+  background-color: #FAFAF9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 28px;
+  border-right: 1.5px solid #F1F5F9;
+  position: relative;
+}
 
+.product-modal-content-col {
+  flex: 0 0 55%;
+  max-width: 55%;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justifyContent: center;
+}
 
+@media (max-width: 680px) {
+  .product-modal-dialog {
+    flex-direction: column;
+  }
+  .product-modal-img-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1.5px solid #F1F5F9;
+    padding: 30px 20px;
+    min-height: 240px;
+  }
+  .product-modal-content-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 24px 20px;
+  }
+}
 
+/* ======================================================================
+   WHY PRIYA IMPEX SECTION — RESPONSIVE (2 ICONS/COLUMNS ON MOBILE)
+   ====================================================================== */
+.why-priya-impex-section {
+  background: var(--cream);
+  color: var(--navy);
+  padding: 68px 0 76px;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
 
+.why-pi-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 46px;
+  padding: 0 12px;
+}
+
+.why-pi-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--gold-pale);
+  border: 1px solid var(--gold-light);
+  padding: 6px 18px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--gold-deep);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  flex-wrap: wrap;
+  line-height: 1.4;
+}
+
+.why-pi-title {
+  font-family: var(--font-h);
+  font-size: clamp(26px, 4.4vw, 44px);
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.why-pi-subtitle {
+  font-size: 15.5px;
+  color: #57534E;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+/* 4 Feature Items Grid */
+.why-pi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px 24px;
+  justify-items: center;
+  align-items: stretch;
+}
+
+.why-pi-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 260px;
+  width: 100%;
+}
+
+.why-pi-icon-badge {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1B2A4A 0%, #0F172A 100%);
+  border: 2px solid rgba(200, 148, 10, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 24px rgba(27, 42, 74, 0.18);
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.why-pi-icon-badge svg {
+  width: 42px;
+  height: 42px;
+  color: #F5C542;
+}
+
+.why-pi-item-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+/* Tablet Responsive (<= 992px) */
+@media (max-width: 992px) {
+  .why-pi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 20px;
+  }
+}
+
+/* Mobile Phone Responsive (<= 640px) - 2 icons per row, arranged vertically */
+@media (max-width: 640px) {
+  .why-priya-impex-section {
+    padding: 42px 0 48px;
+  }
+
+  .why-pi-header {
+    margin-bottom: 28px;
+    padding: 0 4px;
+  }
+
+  .why-pi-title {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.3px !important;
+    color: var(--navy) !important;
+  }
+
+  .why-pi-badge {
+    padding: 5px 12px;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    gap: 5px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .why-pi-badge svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .why-pi-subtitle {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  /* 2 items per row (2 icons side-by-side in each row, 2 rows vertical) */
+  .why-pi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 12px;
+  }
+
+  .why-pi-card {
+    max-width: 100%;
+    padding: 14px 8px;
+    background: #FFFFFF;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(11, 34, 64, 0.05);
+  }
+
+  .why-pi-icon-badge {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 10px;
+    box-shadow: 0 6px 14px rgba(27, 42, 74, 0.12);
+  }
+
+  .why-pi-icon-badge svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .why-pi-item-title {
+    font-size: 11.5px;
+    line-height: 1.35;
+    font-weight: 700;
+  }
+}
+
+/* Very Small Mobile Screens (<= 380px) */
+@media (max-width: 380px) {
+  .counter-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .counter-card-v2 {
+    padding: 12px 8px !important;
+  }
+
+  .counter-icon-wrap {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .counter-icon-wrap svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .counter-num-val {
+    font-size: 19px !important;
+  }
+
+  .counter-card-v2 h3 {
+    font-size: 11px !important;
+  }
+
+  .counter-card-v2 p {
+    font-size: 9.5px !important;
+  }
+
+  .why-pi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 6px;
+  }
+
+  .why-pi-card {
+    padding: 10px 5px;
+  }
+
+  .why-pi-icon-badge {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 6px;
+  }
+
+  .why-pi-icon-badge svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .why-pi-item-title {
+    font-size: 10.5px;
+    line-height: 1.25;
+    font-weight: 700;
+  }
+}
 
 
 
