@@ -21,15 +21,15 @@ export default function AboutUs({ onNavigate }) {
             {/* World Map / Global Export Footprint Frame */}
             <div style={{
               position: 'relative',
-              borderRadius: '24px',
+              borderRadius: '20px',
               overflow: 'hidden',
               border: '1.5px solid #E2E8F0',
-              boxShadow: '0 16px 36px rgba(10, 37, 64, 0.08)',
+              boxShadow: '0 12px 32px rgba(10, 37, 64, 0.07)',
               backgroundColor: '#FFFFFF',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              padding: '16px',
+              padding: '6px 8px',
               width: '100%'
             }}>
               <img
@@ -40,11 +40,9 @@ export default function AboutUs({ onNavigate }) {
                 style={{
                   width: '100%',
                   height: 'auto',
-                  maxHeight: '440px',
                   objectFit: 'contain',
                   borderRadius: '14px',
-                  display: 'block',
-                  transition: 'transform 0.4s ease'
+                  display: 'block'
                 }}
               />
             </div>
