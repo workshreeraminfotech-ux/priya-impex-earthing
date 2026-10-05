@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, Factory, Building2, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import aboutUsImg from '../assets/about us.webp';
+import worldMapImg from '../assets/world-map-export.png';
 
 export default function AboutUs({ onNavigate }) {
   return (
@@ -18,33 +18,33 @@ export default function AboutUs({ onNavigate }) {
             transition={{ duration: 0.6 }}
             style={{ position: 'relative', width: '100%' }}
           >
-            {/* Main About Us Photo Frame */}
+            {/* World Map / Global Export Footprint Frame */}
             <div style={{
               position: 'relative',
-              borderRadius: '26px',
+              borderRadius: '24px',
               overflow: 'hidden',
-              border: '2px solid var(--border)',
-              boxShadow: '0 18px 40px rgba(200, 148, 10, 0.1)',
-              backgroundColor: '#FFFDF7',
+              border: '1.5px solid #E2E8F0',
+              boxShadow: '0 16px 36px rgba(10, 37, 64, 0.08)',
+              backgroundColor: '#FFFFFF',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              padding: '12px',
+              padding: '16px',
               width: '100%'
             }}>
               <img
-                src={aboutUsImg}
-                alt="Priya Impex Manufacturing Units & Export Desk"
+                src={worldMapImg}
+                alt="Priya Impex Global Export Footprint & World Trade Map"
                 loading="lazy"
                 decoding="async"
                 style={{
                   width: '100%',
                   height: 'auto',
-                  maxHeight: '460px',
+                  maxHeight: '440px',
                   objectFit: 'contain',
-                  borderRadius: '18px',
+                  borderRadius: '14px',
                   display: 'block',
-                  transition: 'transform 0.5s ease'
+                  transition: 'transform 0.4s ease'
                 }}
               />
             </div>
