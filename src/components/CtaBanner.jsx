@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import handshakeImg from '../assets/handshake-export.png';
 
 export default function CtaBanner({ onOpenQuote, onNavigate }) {
   return (
@@ -15,10 +16,11 @@ export default function CtaBanner({ onOpenQuote, onNavigate }) {
         >
           <div className="cta-banner-grid">
             {/* Left Image Showcase */}
-            <div className="cta-banner-image-wrap">
+            <div className="cta-banner-image-wrap" style={{ backgroundColor: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '14px' }}>
               <img
-                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
-                alt="Connect with Priya Impex Earthing & Brass"
+                src={handshakeImg}
+                alt="Partner with Priya Impex for Direct Bulk Exports"
+                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               />
               <div className="cta-image-floating-tag">
                 <Sparkles size={15} color="#F5C542" />
