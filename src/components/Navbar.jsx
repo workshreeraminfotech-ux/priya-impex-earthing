@@ -49,7 +49,7 @@ export const PRODUCT_CATEGORIES_MENU = [
   }
 ];
 
-export default function Navbar({ activePage, onNavigate, onOpenBrochure }) {
+export default function Navbar({ activePage, onNavigate, onOpenQuote }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -82,17 +82,6 @@ export default function Navbar({ activePage, onNavigate, onOpenBrochure }) {
   const handleLogoClick = (e) => {
     e.preventDefault();
     handleNav('home');
-  };
-
-  const handleDownloadBrochure = (e) => {
-    if (e) e.preventDefault();
-    const link = document.createElement('a');
-    link.href = '/Priya%20Impex%20brochure.pdf';
-    link.download = 'Priya_Impex_Brochure.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setMobileOpen(false);
   };
 
   return (
@@ -306,12 +295,12 @@ export default function Navbar({ activePage, onNavigate, onOpenBrochure }) {
             <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
               <div className="d-none-mobile">
                 <button
-                  className="btn-brochure-highlight"
-                  onClick={handleDownloadBrochure}
-                  title="Download Priya Impex Official Export Brochure"
+                  className="btn btn-primary"
+                  onClick={() => onOpenQuote ? onOpenQuote() : handleNav('contact')}
+                  style={{ padding: '10px 22px', fontSize: '14px', borderRadius: '10px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
                 >
-                  <Download size={17} style={{ color: '#F5C542' }} />
-                  <span>Download Brochure</span>
+                  <span>Request Quote</span>
+                  <ArrowRight size={16} />
                 </button>
               </div>
 
@@ -402,12 +391,12 @@ export default function Navbar({ activePage, onNavigate, onOpenBrochure }) {
 
               <div style={{ marginTop: '18px' }}>
                 <button 
-                  className="btn-brochure-highlight" 
-                  onClick={handleDownloadBrochure} 
-                  style={{ width: '100%', justifyContent: 'center', padding: '12px 18px !important' }}
+                  className="btn btn-primary" 
+                  onClick={() => { setMobileOpen(false); if (onOpenQuote) onOpenQuote(); else handleNav('contact'); }} 
+                  style={{ width: '100%', justifyContent: 'center', padding: '12px 18px', borderRadius: '10px', display: 'flex', alignItems: 'center', gap: '8px' }}
                 >
-                  <Download size={18} style={{ color: '#F5C542' }} />
-                  <span>Download Brochure</span>
+                  <span>Request Quote</span>
+                  <ArrowRight size={16} />
                 </button>
               </div>
             </div>

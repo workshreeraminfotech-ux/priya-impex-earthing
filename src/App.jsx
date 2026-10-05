@@ -15,13 +15,11 @@ const ProductsPage = lazy(() => import('./pages/ProductsPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const QuickViewModal = lazy(() => import('./components/QuickViewModal'));
-const BrochureModal = lazy(() => import('./components/BrochureModal'));
 
 export default function App() {
   const [activePage, setActivePage] = useState('home');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [quoteProduct, setQuoteProduct] = useState('');
-  const [isBrochureOpen, setIsBrochureOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [productSearch, setProductSearch] = useState('');
 
@@ -60,15 +58,6 @@ export default function App() {
     if (ogDesc) ogDesc.setAttribute('content', seo.desc);
   }, [activePage]);
 
-  // 10-Second Auto Popup for Brochure
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsBrochureOpen(true);
-    }, 10000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   const handleNavigate = (pageId, category = 'All', search = '') => {
     setActivePage(pageId);
     setSelectedCategory(category);
@@ -96,7 +85,7 @@ export default function App() {
       <Navbar 
         activePage={activePage} 
         onNavigate={handleNavigate} 
-        onOpenBrochure={() => setIsBrochureOpen(true)} 
+        onOpenQuote={(prod) => handleOpenQuote(prod)}
       />
 
       <main>
@@ -144,11 +133,6 @@ export default function App() {
         {selectedProduct && (
           <QuickViewModal product={selectedProduct} onClose={() => setSelectedProduct(null)} onOpenQuote={(prod) => handleOpenQuote(prod)} />
         )}
-
-        <BrochureModal 
-          isOpen={isBrochureOpen} 
-          onClose={() => setIsBrochureOpen(false)} 
-        />
       </Suspense>
 
       <WhatsAppFloat />
