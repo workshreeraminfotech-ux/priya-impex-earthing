@@ -3,39 +3,55 @@
 import { PRODUCTS as INITIAL_PRODUCTS, PRODUCT_CATEGORIES } from '../data/products';
 import { BLOGS as INITIAL_BLOGS } from '../data/blogs';
 
-import cert1Logo from '../assets/certificate/apeda.webp';
-import cert2Logo from '../assets/certificate/spices board.webp';
-import cert3Logo from '../assets/certificate/fssai.webp';
-import certExtraLogo from '../assets/certificate/certificate-extra.webp';
+import certIsoLogo from '../assets/certificate/ISO 90012015 Certificate.png';
+import certNablLogo from '../assets/certificate/NABL Accreditation Certificate.png';
+import certIecLogo from '../assets/certificate/IEC — Import Export Code.png';
+import certRcmcLogo from '../assets/certificate/RCMC — Registration Cum Membership Certificate.png';
+import certIncorpLogo from '../assets/certificate/Certificate of Incorporation from India.png';
+import certGstLogo from '../assets/certificate/GST Registration Certificate.png';
 
 const INITIAL_CERTS = [
   { 
     id: 'cert-1',
-    name: 'ISO 9001:2015 Certified', 
+    name: 'ISO 9001:2015 Quality Management', 
     code: 'ISO 9001:2015', 
     tag: 'Quality Management Systems for Earthing & Precision Brass Manufacturing',
-    logo: cert1Logo
+    logo: certIsoLogo
   },
   { 
     id: 'cert-2',
-    name: 'CE Certified Compliance', 
-    code: 'CE COMPLIANT', 
-    tag: 'European Conformity for Electrical & Grounding Hardware',
-    logo: cert2Logo
+    name: 'NABL Accreditation Certificate', 
+    code: 'NABL ACCREDITED', 
+    tag: 'National Accreditation Board for Testing and Calibration Laboratories',
+    logo: certNablLogo
   },
   { 
     id: 'cert-3',
-    name: 'RoHS & REACH Compliant', 
-    code: 'RoHS / REACH', 
-    tag: 'Hazardous Substance Free Certification for Export Brass Alloys',
-    logo: cert3Logo
+    name: 'IEC — Import Export Code', 
+    code: 'GOVT. RECOGNIZED EXPORTER', 
+    tag: 'Directorate General of Foreign Trade (DGFT), Ministry of Commerce & Industry',
+    logo: certIecLogo
   },
   { 
     id: 'cert-4',
-    name: 'Govt. Recognized Export House', 
-    code: 'EXPORT HOUSE', 
-    tag: 'Ministry of Commerce & Industry, Government of India',
-    logo: certExtraLogo
+    name: 'RCMC — Registration Cum Membership', 
+    code: 'EEPC / FIEO MEMBER', 
+    tag: 'Registration-Cum-Membership Certificate for Global Engineering Exports',
+    logo: certRcmcLogo
+  },
+  { 
+    id: 'cert-5',
+    name: 'Certificate of Incorporation', 
+    code: 'GOVT. OF INDIA', 
+    tag: 'Ministry of Corporate Affairs, Registrar of Companies India',
+    logo: certIncorpLogo
+  },
+  { 
+    id: 'cert-6',
+    name: 'GST Registration Certificate', 
+    code: 'GST REGISTERED', 
+    tag: 'Goods and Services Tax Compliance, Government of India',
+    logo: certGstLogo
   }
 ];
 

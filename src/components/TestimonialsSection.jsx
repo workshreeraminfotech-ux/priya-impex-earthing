@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
+import testimonialsShowcaseImg from '../assets/testimonials-showcase.jpg';
 
 const testimonials = [
   {
@@ -148,8 +149,10 @@ export default function TestimonialsSection() {
           <div style={{ position: 'relative' }}>
             <div className="testi-image-wrap" style={{ borderRadius: '24px', overflow: 'hidden', height: '100%', minHeight: '380px', boxShadow: '0 12px 36px rgba(11, 34, 64, 0.08)' }}>
               <img
-                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
-                alt="Priya Impex Earthing & Brass Engineering Testimonials"
+                src={testimonialsShowcaseImg}
+                alt="Priya Impex Earthing & Brass Engineering Client Testimonials"
+                loading="lazy"
+                decoding="async"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
