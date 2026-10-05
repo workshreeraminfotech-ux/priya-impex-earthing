@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import handshakeImg from '../assets/handshake-export.png';
 
 export default function CtaBanner({ onOpenQuote, onNavigate }) {
   return (
@@ -18,8 +17,8 @@ export default function CtaBanner({ onOpenQuote, onNavigate }) {
             {/* Left Image Showcase */}
             <div className="cta-banner-image-wrap">
               <img
-                src={handshakeImg}
-                alt="Partner with Priya Impex for Direct Bulk Exports"
+                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+                alt="Connect with Priya Impex Earthing & Brass"
               />
               <div className="cta-image-floating-tag">
                 <Sparkles size={15} color="#F5C542" />
