@@ -16,11 +16,10 @@ export default function CtaBanner({ onOpenQuote, onNavigate }) {
         >
           <div className="cta-banner-grid">
             {/* Left Image Showcase */}
-            <div className="cta-banner-image-wrap" style={{ backgroundColor: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '14px' }}>
+            <div className="cta-banner-image-wrap">
               <img
                 src={handshakeImg}
                 alt="Partner with Priya Impex for Direct Bulk Exports"
-                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               />
               <div className="cta-image-floating-tag">
                 <Sparkles size={15} color="#F5C542" />
