@@ -11,14 +11,9 @@ export default function HeroBannerSlider({ onOpenQuote, onNavigate }) {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    // Mobile screens (< 768px) and Data Saver users stay on the lightweight poster for instant load
-    const isMobile = window.innerWidth < 768;
-    const isDataSaver = navigator.connection?.saveData === true || navigator.connection?.effectiveType === '2g' || navigator.connection?.effectiveType === '3g';
-
-    if (!isMobile && !isDataSaver) {
-      // Defer video stream on desktop so initial LCP/FCP renders in 30ms
-      const timer = setTimeout(() => setShouldLoadVideo(true), 1200);
-      return () => clearTimeout(timer);
+    const isDataSaver = navigator.connection?.saveData === true || navigator.connection?.effectiveType === '2g';
+    if (!isDataSaver) {
+      setShouldLoadVideo(true);
     }
   }, []);
 
