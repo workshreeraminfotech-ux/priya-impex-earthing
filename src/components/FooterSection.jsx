@@ -102,9 +102,9 @@ export default function FooterSection({ onNavigate }) {
                 <Phone size={18} className="contact-icon" />
                 <span>+91 9328602931</span>
               </a>
-              <a href="mailto:sales@priyaimpexindia.com" className="footer-contact-item item-link">
+              <a href="mailto:sales@priyaimpexs.com" className="footer-contact-item item-link">
                 <Mail size={18} className="contact-icon" />
-                <span>sales@priyaimpexindia.com</span>
+                <span>sales@priyaimpexs.com</span>
               </a>
             </div>
           </div>
