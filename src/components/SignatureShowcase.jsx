@@ -6,9 +6,9 @@ import {
 import { PRODUCTS } from '../data/products';
 
 // Direct imports for the 3 signature products provided in assets/signture products folder
-import hotLineClampImg from '../assets/signture products/Hot Line Clamp.png';
-import brassSwitchgearCrankImg from '../assets/signture products/Brass Switchgear Clip Crank with Assambly.png';
-import earthReturnBrushImg from '../assets/signture products/EARTH RETURN BRUSH WITH BRUSH HOLDER ASSEMBLY.png';
+import hotLineClampImg from '../assets/signture products/Hot Line Clamp.webp';
+import brassSwitchgearCrankImg from '../assets/signture products/Brass Switchgear Clip Crank with Assambly.webp';
+import earthReturnBrushImg from '../assets/signture products/EARTH RETURN BRUSH WITH BRUSH HOLDER ASSEMBLY.webp';
 
 // All 3 signature products provided in src/assets/signture products folder
 const SIGNATURE_PRODUCTS = [

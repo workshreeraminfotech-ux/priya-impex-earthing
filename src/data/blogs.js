@@ -1,9 +1,9 @@
 // Central Blog Dataset for Priya Impex
 // Technical Guides & Signature Products Engineering Knowledge
 
-import hotLineClampImg from '../assets/signture products/Hot Line Clamp.png';
-import brassSwitchgearCrankImg from '../assets/signture products/Brass Switchgear Clip Crank with Assambly.png';
-import earthReturnBrushImg from '../assets/signture products/EARTH RETURN BRUSH WITH BRUSH HOLDER ASSEMBLY.png';
+import hotLineClampImg from '../assets/signture products/Hot Line Clamp.webp';
+import brassSwitchgearCrankImg from '../assets/signture products/Brass Switchgear Clip Crank with Assambly.webp';
+import earthReturnBrushImg from '../assets/signture products/EARTH RETURN BRUSH WITH BRUSH HOLDER ASSEMBLY.webp';
 
 export const BLOGS = [
   {

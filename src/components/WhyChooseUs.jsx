@@ -2,8 +2,8 @@ import React from 'react';
 import { Globe, Truck, Anchor, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-import foundryMachiningImg from '../assets/foundry-machining.jpg';
-import qualityTestingImg from '../assets/quality-testing-lab.jpg';
+import foundryMachiningImg from '../assets/foundry-machining.webp';
+import qualityTestingImg from '../assets/quality-testing-lab.webp';
 
 export default function WhyChooseUs({ onNavigate }) {
   const services = [

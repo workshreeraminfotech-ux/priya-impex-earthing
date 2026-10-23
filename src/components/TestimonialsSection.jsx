@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
-import testimonialsShowcaseImg from '../assets/testimonials-showcase.jpg';
+import testimonialsShowcaseImg from '../assets/testimonials-showcase.webp';
 
 const testimonials = [
   {

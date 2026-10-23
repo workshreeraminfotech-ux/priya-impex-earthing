@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import handshakeImg from '../assets/export-handshake.jpg';
+import handshakeImg from '../assets/export-handshake.webp';
 
 export default function CtaBanner({ onOpenQuote, onNavigate }) {
   return (

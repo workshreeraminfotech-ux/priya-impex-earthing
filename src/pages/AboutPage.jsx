@@ -7,8 +7,8 @@ import CtaBanner from '../components/CtaBanner';
 
 import hygienicPackagingImg from '../assets/hygienic-packaging.webp';
 import containerDispatchImg from '../assets/container-dispatch.webp';
-import plantRajkotImg from '../assets/plant-rajkot-earthing.jpg';
-import plantJamnagarImg from '../assets/plant-jamnagar-brass.jpg';
+import plantRajkotImg from '../assets/plant-rajkot-earthing.webp';
+import plantJamnagarImg from '../assets/plant-jamnagar-brass.webp';
 
 export default function AboutPage({ onNavigate, onOpenQuote }) {
   const values = [

@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { 
   Menu, X, ArrowRight, MapPin, Mail, Phone, Download, 
   ChevronDown, Sparkles, ShieldCheck, Zap, Cpu, Settings, 
-  Wrench, Layers, Link2, ChevronRight 
+  Wrench, Layers, Link2, ChevronRight, Hexagon 
 } from 'lucide-react';
 import logoImg from '../assets/logo.png';
 
@@ -41,6 +41,11 @@ export const PRODUCT_CATEGORIES_MENU = [
     name: 'Channel Strut Accessories', 
     icon: Layers, 
     desc: 'Channel Spring Nuts, Pipe Clamps & Brackets' 
+  },
+  { 
+    name: 'Brass Rods', 
+    icon: Hexagon, 
+    desc: 'Hex, Round, Square, Hollow Rods & Profiles' 
   },
   { 
     name: 'Custom Made Products', 

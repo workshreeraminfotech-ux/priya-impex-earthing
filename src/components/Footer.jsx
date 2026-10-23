@@ -44,9 +44,10 @@ export default function Footer() {
           <div>
             <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '16px', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>Product Categories</h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '14px' }}>
-              <li><a href="#products" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Earthing Solutions</a></li>
-              <li><a href="#products" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Brass Components</a></li>
               <li><a href="#products" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Earthing Accessories</a></li>
+              <li><a href="#products" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Cable Management</a></li>
+              <li><a href="#products" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Brass Rods</a></li>
+              <li><a href="#products" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Switchboard Components</a></li>
             </ul>
           </div>
 

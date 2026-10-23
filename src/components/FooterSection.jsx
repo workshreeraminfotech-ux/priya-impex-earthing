@@ -68,18 +68,23 @@ export default function FooterSection({ onNavigate }) {
             <h3>Product Categories</h3>
             <ul className="footer-links-list">
               <li>
-                <a href="#" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('products', 'Earthing Solutions'); }}>
-                  <ChevronRight size={14} className="link-arrow" /> Earthing Solutions
-                </a>
-              </li>
-              <li>
-                <a href="#" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('products', 'Brass Components'); }}>
-                  <ChevronRight size={14} className="link-arrow" /> Brass Components
-                </a>
-              </li>
-              <li>
                 <a href="#" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('products', 'Earthing Accessories'); }}>
                   <ChevronRight size={14} className="link-arrow" /> Earthing Accessories
+                </a>
+              </li>
+              <li>
+                <a href="#" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('products', 'Cable Management'); }}>
+                  <ChevronRight size={14} className="link-arrow" /> Cable Management
+                </a>
+              </li>
+              <li>
+                <a href="#" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('products', 'Brass Rods'); }}>
+                  <ChevronRight size={14} className="link-arrow" /> Brass Rods
+                </a>
+              </li>
+              <li>
+                <a href="#" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('products', 'Switchboard Components'); }}>
+                  <ChevronRight size={14} className="link-arrow" /> Switchboard Components
                 </a>
               </li>
             </ul>
